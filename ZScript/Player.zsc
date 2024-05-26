@@ -1,4 +1,4 @@
-class RachelPlayer : DoomPlayer
+class RachelPlayer : PlayerPawn
 {
 	Default
 	{
@@ -21,15 +21,19 @@ class RachelPlayer : DoomPlayer
 		Player.WeaponSlot 7, "BFG9000";
 
 		Player.ColorRange 200, 207;
-		Player.Colorset 0, "$TXT_COLOR_GREEN",		0x70, 0x7F,  0x72;
-		Player.Colorset 1, "$TXT_COLOR_GRAY",		0x60, 0x6F,  0x62;
-		Player.Colorset 2, "$TXT_COLOR_BROWN",		0x40, 0x4F,  0x42;
-		Player.Colorset 3, "$TXT_COLOR_RED",		0x20, 0x2F,  0x22;
-		// Doom Legacy additions
-		Player.Colorset 4, "$TXT_COLOR_LIGHTGRAY",	0x58, 0x67,  0x5A;
-		Player.Colorset 5, "$TXT_COLOR_LIGHTBROWN",	0x38, 0x47,  0x3A;
-		Player.Colorset 6, "$TXT_COLOR_LIGHTRED",	0xB0, 0xBF,  0xB2;
-		Player.Colorset 7, "$TXT_COLOR_LIGHTBLUE",	0xC0, 0xCF,  0xC2;
+		Player.Colorset 0, "$TXT_COLOR_DEFAULT",		200,207,203;
+		Player.Colorset 1, "$TXT_COLOR_WHITE",			0,	17,	0;
+		Player.Colorset 2, "$TXT_COLOR_GRAY",			4,	24,	12;
+		Player.Colorset 3, "$TXT_COLOR_BLACK",			21,	31,	27;
+		Player.Colorset 4, "$TXT_COLOR_RED",			32,	47,	40;
+		Player.Colorset 5, "$TXT_COLOR_ORANGE",			49,	62,	55;
+		Player.Colorset 6, "$TXT_COLOR_YELLOW",			73,	79,	76;
+		Player.Colorset 7, "$TXT_COLOR_GREEN",			96,111,102;
+		Player.Colorset 8, "$TXT_COLOR_AQUA",			120,127,123;
+		Player.Colorset 9, "$TXT_COLOR_SKY",			128,139,133;
+		Player.Colorset 10,"$TXT_COLOR_BLUE",			146,153,151;
+		Player.Colorset 11,"$TXT_COLOR_PURPLE",			160,169,164;
+		Player.Colorset 12,"$TXT_COLOR_MAGENTA",		179,187,184;
 		+DECOUPLEDANIMATIONS
 		+NOSKIN
 

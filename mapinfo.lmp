@@ -88,4 +88,5 @@ Map "MAP01" "$TXT_MAP01"
 {
 	LightMode = 3
 	Sky1 = "textures/sky1.png"
+	Music = "O_TEK"
 }

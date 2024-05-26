@@ -2,6 +2,10 @@
 
 class RLP_Weapon : Weapon
 {
+	action bool JustPressed(int which) // "which" being any BT_* value, mentioned above or not
+	{
+		return player.cmd.buttons & which && !(player.oldbuttons & which);
+	}
 	Default
 	{
 		Weapon.Kickback 100;

@@ -11,3 +11,12 @@ SKILL_NIGHTMARE = "Very Hard";
 TXT_MAP01 = "My Test Level";
 
 TXT_HUD_HEALTH = "Health: ";
+
+// Weapon pickups
+PICKUP_BLASTER_A = "\c[White]Picked up \c[Sapphire]Blaster A\c[White].";
+
+// Weapon obituaries
+OB_BLASTER_A = "%o was plinked to death by %k's \c[Sapphire]Blaster A\c[Gold].";
+
+// Weapon tags
+TAG_BLASTER_A = "Blaster A";
