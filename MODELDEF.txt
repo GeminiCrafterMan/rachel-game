@@ -1,0 +1,17 @@
+Model RachelPlayer
+{
+	Path "Models/"
+	Model 0 "world.iqm"
+	Skin 0 "geminiTexture.png"
+	Scale 15 15 15
+	BaseFrame // Decoupled animations REQUIRE this
+}
+Model RLP_BlasterA
+{
+	Path "Models/"
+	Model 0 "blasterA.iqm"
+	Skin 0 "geminiTexture.png"
+	Scale 15 15 15
+	SCALEWEAPONFOV
+	BaseFrame // Decoupled animations REQUIRE this
+}

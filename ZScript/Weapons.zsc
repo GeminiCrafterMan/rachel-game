@@ -1,0 +1,9 @@
+#include "ZScript/Weapons/RLP_BlasterA.zsc"
+
+class RLP_Weapon : Weapon
+{
+	Default
+	{
+		Weapon.Kickback 100;
+	}
+}
