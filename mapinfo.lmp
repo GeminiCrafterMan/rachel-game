@@ -30,6 +30,10 @@ Episode map01
 {
 	Name = "$TXT_MAP01_NAME"
 }
+Episode test
+{
+	Name = "$TXT_TEST_NAME"
+}
 
 //-------------------------------------------------------------------------------------------
 //
@@ -85,6 +89,14 @@ Skill nightmare
 //-------------------------------------------------------------------------------------------
 
 Map "MAP01" "$TXT_MAP01"
+{
+	LightMode = 3
+	Sky1 = "textures/sky1.png"
+	Music = "O_TEK"
+	Next = "MAP02"
+}
+
+Map "TEST" "$TXT_TEST"
 {
 	LightMode = 3
 	Sky1 = "textures/sky1.png"

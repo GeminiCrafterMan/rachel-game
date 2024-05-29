@@ -1,2 +1,12 @@
 weapons/blaster_a/fire		"Sounds/Weapons/Blaster A/fire.wav"
 weapons/blaster_a/explode	"Sounds/Weapons/Blaster A/explode.wav"
+
+weapons/kahuna/empty		"Sounds/Weapons/Slayer's Kahuna/empty.wav"
+weapons/kahuna/fire1		"Sounds/Weapons/Slayer's Kahuna/Fire1.wav"
+weapons/kahuna/fire2		"Sounds/Weapons/Slayer's Kahuna/Fire2.wav"
+weapons/kahuna/fire3		"Sounds/Weapons/Slayer's Kahuna/Fire3.wav"
+weapons/kahuna/pickup		"Sounds/Weapons/Slayer's Kahuna/pickup.wav"
+weapons/kahuna/pump1		"Sounds/Weapons/Slayer's Kahuna/Pump1.wav"
+weapons/kahuna/pump2		"Sounds/Weapons/Slayer's Kahuna/Pump2.wav"
+
+$random weapons/kahuna/fire { weapons/kahuna/fire1 weapons/kahuna/fire2 weapons/kahuna/fire3 }

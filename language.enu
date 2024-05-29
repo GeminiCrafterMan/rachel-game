@@ -1,6 +1,8 @@
 [enu default]
 
 TXT_GAME_NAME = "My Standalone Game";
+TXT_MAP01_NAME = "Start game";
+TXT_TEST_NAME = "Test map";
 
 SKILL_BABY = "Very Easy";
 SKILL_EASY = "Easy";
@@ -8,7 +10,21 @@ SKILL_NORMAL = "Normal";
 SKILL_HARD = "Hard";
 SKILL_NIGHTMARE = "Very Hard";
 
-TXT_MAP01 = "My Test Level";
+TXT_COLOR_DEFAULT = "Default";
+TXT_COLOR_WHITE = "White";
+TXT_COLOR_GRAY = "Gray";
+TXT_COLOR_BLACK = "Black";
+TXT_COLOR_RED = "Red";
+TXT_COLOR_ORANGE = "Orange";
+TXT_COLOR_YELLOW = "Yellow";
+TXT_COLOR_GREEN = "Green";
+TXT_COLOR_AQUA = "Aqua";
+TXT_COLOR_SKY = "Sky";
+TXT_COLOR_BLUE = "Blue";
+TXT_COLOR_PURPLE = "Purple";
+TXT_COLOR_MAGENTA = "Magenta";
+
+TXT_TEST = "My Test Level";
 
 TXT_HUD_HEALTH = "Health: ";
 

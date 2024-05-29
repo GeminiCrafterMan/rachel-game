@@ -1,4 +1,5 @@
 #include "ZScript/Weapons/RLP_BlasterA.zsc"
+#include "ZScript/Weapons/RLP_Kahuna.zsc"
 
 class RLP_Weapon : Weapon
 {
