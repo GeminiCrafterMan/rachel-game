@@ -32,7 +32,7 @@ class RLP_BlasterA : RLP_Weapon
 			Loop;
 		Fire:
 			M000 A 4 {
-				A_StartSound("weapons/blaster_a/fire");
+				A_StartSound("weapons/blaster_a/fire", CHAN_AUTO);
 				A_FireProjectile("RLP_BlasterA_Projectile", spawnofs_xy: 8);
 				invoker.SetAnimation('Fire');
 //				A_GunFlash();

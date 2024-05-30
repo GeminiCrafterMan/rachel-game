@@ -1,0 +1,12 @@
+version "4.12.2"
+
+#include "ZScript/Player.zsc"
+#include "ZScript/Weapons.zsc"
+#include "ZScript/HUD.zsc"
+
+// Universal Weapon Sway
+#include "ZScript/sway/sway.zsc"
+#include "ZScript/sway/menu.zsc"
+
+// ZFootsteps
+#include "ZScript/StepEventHandler.zsc"

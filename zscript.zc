@@ -1,5 +1,0 @@
-version "4.12.2"
-
-#include "ZScript/Player.zsc"
-#include "ZScript/Weapons.zsc"
-#include "ZScript/MyStandaloneGameHUD/MyStandaloneGameHUD.zc"

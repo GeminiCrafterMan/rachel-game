@@ -16,7 +16,8 @@ GameInfo
 	DimColor = "0b 0b 0b"
 	DimAmount = 0.8
 	PlayerClasses = "RachelPlayer"
-	StatusbarClass = "MyStandaloneGameHUD"
+	StatusbarClass = "RLP_HUD"
+	AddEventHandlers = "SwayHandler", "StepEventHandler"
 }
 
 //-------------------------------------------------------------------------------------------

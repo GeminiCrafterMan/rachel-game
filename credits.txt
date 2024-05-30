@@ -5,3 +5,11 @@ FreeDoom Contributors:
 
 Chafmere:
 - Godot 4 FPS Controller models (the Blasters)
+
+Nash Muhandes and Boondorl:
+- Universal Weapon Sway
+
+Geno (@LukasATBK on Twitter):
+- Rachel model
+- Slayer's Kahuna model
+- General Blender assistance

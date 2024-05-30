@@ -1,5 +1,5 @@
 class RLP_KahunaSpread : Inventory {Default{Inventory.MaxAmount 24;}}
-class RLP_Kahuna : RLP_Weapon
+class RLP_Kahuna : RLP_Weapon replaces Shotgun // for now
 {
 	Default
 	{
@@ -10,6 +10,11 @@ class RLP_Kahuna : RLP_Weapon
 		Inventory.PickupMessage "$PICKUP_KAHUNA";
 		Tag "$TAG_KAHUNA";
 		+DECOUPLEDANIMATIONS
+		Weapon.AmmoType1 "Shell";
+		Weapon.AmmoUse1 1;
+		Weapon.AmmoGive1 9;
+		Weapon.AmmoType2 "Shell";
+		Weapon.AmmoUse2 1;
 		// Needs an ammo type.
 		// Probably just make a new shell ammo type,
 		// but don't bother with replacing Doom's original one,
@@ -25,36 +30,37 @@ class RLP_Kahuna : RLP_Weapon
 			Loop;
 		Select:
 			M000 A 1 {
-				A_Raise(18);
 				A_OverlayFlags(OverlayID(), PSPF_ADDWEAPON|PSPF_ADDBOB|PSPF_PLAYERTRANSLATED, true);
+				A_ChangeModel("RLP_Kahuna", 0, "Models", "Shotgun-hands.iqm", 0, "Models", "geminiTexture.png", 0, 0);
 				A_ChangeModel("RLP_Kahuna", 1, "Models", "Shotgun-gun.iqm", 1, "Models", "ShotgunTexture.png", 0, 0);
-				invoker.SetAnimation('Idle', flags: SAF_NOOVERRIDE);
+				A_Raise(18);
+				invoker.SetAnimation('Idle', flags: SAF_INSTANT);
 			}
 			Loop;
 		Deselect:
 			M000 A 1 {
 				A_Lower(18);
-				invoker.SetAnimation('Idle', flags: SAF_NOOVERRIDE);
+				invoker.SetAnimation('Idle', flags: SAF_INSTANT);
 			}
 			Loop;
 		Fire:
 			M000 A 6 Bright {
 				A_ChangeVelocity(-Cos(pitch)*2, 0, sin(pitch)*2,CVF_RELATIVE);
 				A_QuakeEx(1.5, 1.5, 1.5, 4, 0, 1, "", QF_SHAKEONLY);
-				A_StartSound("weapons/kahuna/fire");
+				A_StartSound("weapons/kahuna/fire", CHAN_AUTO);
 				A_FireBullets((6+(Countinv("RLP_KahunaSpread")*0.4)), (6+(Countinv("RLP_KahunaSpread")*0.4)), 12, 10, "BulletPuff", FBF_USEAMMO|FBF_NORANDOM);
 				invoker.SetAnimation('Fire');
 //				A_GunFlash();
 			}
 			M000 A 1;
 			M000 A 10 {invoker.SetAnimation('Pump');}
-			M000 A 9 A_StartSound("weapons/kahuna/pump1");
-			M000 A 8 A_StartSound("weapons/kahuna/pump2");
+			M000 A 9 A_StartSound("weapons/kahuna/pump1", CHAN_AUTO);
+			M000 A 8 A_StartSound("weapons/kahuna/pump2", CHAN_AUTO);
 			M000 A 0 A_ReFire;
 			Goto Ready;
 		AltFire:
 			M000 A 1 Bright {
-				A_StartSound("weapons/kahuna/fire");
+				A_StartSound("weapons/kahuna/fire", CHAN_AUTO);
 				A_SetPitch(pitch+0.80);
 				invoker.SetAnimation('Fire');
 				A_FireBullets((5+(Countinv("RLP_KahunaSpread")*0.8)), (5+(Countinv("RLP_KahunaSpread")*0.8)), 12, 11, "BulletPuff", FBF_USEAMMO|FBF_NORANDOM);
@@ -71,15 +77,18 @@ class RLP_Kahuna : RLP_Weapon
 			M000 A 5 {invoker.SetAnimation('Spin');}
 			TNT1 A 0 A_ReFire;
 			M000 A 10 {invoker.SetAnimation('Pump');}
-			M000 A 9 A_StartSound("weapons/kahuna/pump1");
-			M000 A 8 A_StartSound("weapons/kahuna/pump2");
+			M000 A 9 A_StartSound("weapons/kahuna/pump1", CHAN_AUTO);
+			M000 A 8 A_StartSound("weapons/kahuna/pump2", CHAN_AUTO);
 			M000 A 0 A_ReFire;
 			Goto Ready;
 //		Flash:
 //			PLSE ABCDE 2 Bright Offset(64, 64);
 //			Stop;
 		Spawn:
-			M000 A -1 {invoker.SetAnimation('Spawn', flags: SAF_LOOP|SAF_NOOVERRIDE);}
+			M000 A -1 NoDelay {
+				A_ChangeModel("RLP_Kahuna", 0, "Models", "Shotgun-gun.iqm", 0, "Models", "ShotgunTexture.png", 0, 0);
+				invoker.SetAnimation('Spawn', flags: SAF_INSTANT);
+			}
 			Stop;
 	}
 }

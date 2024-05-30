@@ -6,6 +6,14 @@ Model RachelPlayer
 	Scale 15 15 15
 	BaseFrame // Decoupled animations REQUIRE this
 }
+Model RLP_QuickKickController
+{
+	Path "Models/"
+	Model 0 "leggy.iqm"
+	Skin 0 "geminiTexture.png"
+	Scale 15 15 15
+	BaseFrame // Decoupled animations REQUIRE this
+}
 Model RLP_BlasterA
 {
 	Path "Models/"
@@ -33,9 +41,6 @@ Model RLP_Kahuna
 	Path "Models/"
 	Model 0 "Shotgun-hands.iqm"
 	Skin 0 "geminiTexture.png"
-//	Model 1 "Shotgun-gun.iqm"
-//	Skin 1 "ShotgunTexture.png"
 	Scale 15 15 15
-//	MODELSAREATTACHMENTS
 	BaseFrame // Decoupled animations REQUIRE this
 }
