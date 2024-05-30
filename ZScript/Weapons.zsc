@@ -10,5 +10,9 @@ class RLP_Weapon : Weapon
 	Default
 	{
 		Weapon.Kickback 100;
+		Weapon.BobStyle "Smooth";
+		Weapon.BobRangeX 1.0;
+		Weapon.BobRangeY 1.0;
+		Weapon.BobSpeed 1.0;
 	}
 }

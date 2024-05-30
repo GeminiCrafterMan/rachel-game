@@ -1,2 +1,7 @@
 FreeDoom Contributors:
 - DSFIRXPL
+- Plasma Rifle projectile sprites (Blaster A)
+- Literally every flat and texture from FreeDoom/FreeDM
+
+Chafmere:
+- Godot 4 FPS Controller models (the Blasters)

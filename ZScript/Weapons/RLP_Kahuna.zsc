@@ -10,6 +10,10 @@ class RLP_Kahuna : RLP_Weapon
 		Inventory.PickupMessage "$PICKUP_KAHUNA";
 		Tag "$TAG_KAHUNA";
 		+DECOUPLEDANIMATIONS
+		// Needs an ammo type.
+		// Probably just make a new shell ammo type,
+		// but don't bother with replacing Doom's original one,
+		// as there's no point unless I want a custom pickup sound.
 	}
 	States
 	{
@@ -59,7 +63,7 @@ class RLP_Kahuna : RLP_Weapon
 //				A_SpawnItemEx("GWM_MuzzleFlashLight2",0,0,5);
 //				A_GunFlash("Flash2");
 				A_QuakeEx(1.5, 1.5, 1.5, 4, 0, 1, "", QF_SHAKEONLY);
-//				A_GiveInventory("GWM_KahunaSpread",2); // important
+				A_GiveInventory("RLP_KahunaSpread",2); // important
 			}
 			M000 A 1 Bright A_SetPitch(pitch+0.80);
 			M000 AAAAA 1 Bright A_SetPitch(pitch-0.40);
