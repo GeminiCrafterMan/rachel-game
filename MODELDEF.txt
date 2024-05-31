@@ -1,46 +1,13 @@
-Model RachelPlayer
+Model HealthBonus
 {
 	Path "Models/"
-	Model 0 "world.iqm"
-	Skin 0 "geminiTexture.png"
-	Scale 15 15 15
-	BaseFrame // Decoupled animations REQUIRE this
-}
-Model RLP_QuickKickController
-{
-	Path "Models/"
-	Model 0 "leggy.iqm"
-	Skin 0 "geminiTexture.png"
-	Scale 15 15 15
-	BaseFrame // Decoupled animations REQUIRE this
-}
-Model RLP_BlasterA
-{
-	Path "Models/"
-	Model 0 "blasterA.iqm"
-	Skin 0 "geminiTexture.png"
-	Scale 15 15 15
-	SCALEWEAPONFOV
-	BaseFrame // Decoupled animations REQUIRE this
-}
-Model RLP_BlasterA_Projectile
-{
-	Path "Models/Projectiles" // Path to model in PK3
-	SKIN 0 "PLSSA0.png" // Model index, model file
-	MODEL 0 "Tracer.md3" // Model index, texture (can be in any format supported by GZDoom)
-	SKIN 1 "PLSSB0.png" // Model index, model file
-	MODEL 1 "Tracer.md3" // Model index, texture (can be in any format supported by GZDoom)
-	Scale 1.25 1.25 1.25 // Scale values
-	PITCHFROMMOMENTUM // A flag that will fix the model pitch for projectiles
+	Model 0 "can.obj"
+	Skin 0 "can.png"
+	Scale 250 250 250
+	ROTATING
 
-	FrameIndex M000 A 0 0 // The sprite lump, sprite frame, model index, frame number
-	FrameIndex M000 B 1 0 // The sprite lump, sprite frame, model index, frame number
-}
-Model RLP_Kahuna
-{
-	Path "Models/"
-	Model 0 "Shotgun-hands.iqm"
-	Skin 0 "geminiTexture.png"
-	Scale 15 15 15
-	BaseFrame // Decoupled animations REQUIRE this
+	FrameIndex BON1 A 0 0 // use M000A0 later, and split this into multiple actors!
+	FrameIndex BON1 B 0 0
+	FrameIndex BON1 C 0 0
+	FrameIndex BON1 D 0 0
 }

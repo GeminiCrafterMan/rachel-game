@@ -1,0 +1,12 @@
+$playersound	RLP_Player	female	*death		dspldeth
+$playersound	RLP_Player	female	*xdeath		dspdiehi
+$playersound	RLP_Player	female	*gibbed		dsslop
+$playersound	RLP_Player	female	*pain100	dsplpain
+$playersounddup	RLP_Player	female	*pain75		*pain100
+$playersounddup	RLP_Player	female	*pain50		*pain100
+$playersounddup	RLP_Player	female	*pain25		*pain100
+$playersound	RLP_Player	female	*grunt		dsoof
+$playersounddup	RLP_Player	female	*land		*grunt
+$playersound	RLP_Player	female	*jump		dsjump
+$playersound	RLP_Player	female	*fist		dspunch
+$playersound	RLP_Player	female	*usefail	"Sounds/Player/suit_denydevice.wav"
