@@ -1,0 +1,21 @@
+Model RLP_JuiceCan
+{
+	Path "Models/Pickups/"
+	Model 0 "can.obj"
+	Skin 0 "can1.png"
+	Scale 15 15 15
+	ROTATING
+
+	FrameIndex M000 A 0 0
+}
+
+Model RLP_Shell
+{
+	Path "Models/Pickups/"
+	Model 0 "shells.obj"
+	Skin 0 "shells.png"
+	Scale 30 30 30
+	AngleOffset 90
+
+	FrameIndex M000 A 0 0
+}

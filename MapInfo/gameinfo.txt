@@ -1,0 +1,25 @@
+//-------------------------------------------------------------------------------------------
+// GAMEINFO DEFINITIONS
+//-------------------------------------------------------------------------------------------
+
+GameInfo
+{
+	TitlePage = "graphics/menu/titlepic.png"
+	CursorPic = "graphics/menu/m_cursor.png"
+	PauseSign = "graphics/menu/m_pause.png"
+	BorderFlat = "graphics/hud/border_flat.png"
+	MenuBackButton = "graphics/menu/m_back.png"
+	MenuFontColor_Title = "White"
+	MenuFontColor_Label = "Default"
+	MenuFontColor_Value = "Gray"
+	MenuFontColor_Action = "Gray"
+	MenuFontColor_Header = "White"
+	MenuFontColor_Highlight = "White"
+	MenuFontColor_Selection = "Gray"
+	FullscreenAutoAspect = 3
+	DimColor = "0b 0b 0b"
+	DimAmount = 0.8
+	PlayerClasses = "RLP_Player"
+	StatusbarClass = "RLP_HUD"
+	AddEventHandlers = "SwayHandler", "StepEventHandler"
+}

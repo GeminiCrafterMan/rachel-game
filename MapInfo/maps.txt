@@ -1,0 +1,18 @@
+//-------------------------------------------------------------------------------------------
+// MAP DEFINITIONS
+//-------------------------------------------------------------------------------------------
+
+Map "TEST" "$TXT_TEST"
+{
+	LightMode = 3
+	Sky1 = "textures/sky1.png"
+	Music = "Tek2"
+}
+
+Map "MAP01" "$TXT_MAP01"
+{
+	LightMode = 3
+	Sky1 = "textures/rsky1.png"
+	Music = "gestation"
+	Next = "MAP02"
+}

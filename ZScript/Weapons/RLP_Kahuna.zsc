@@ -1,5 +1,5 @@
 class RLP_KahunaSpread : Inventory {Default{Inventory.MaxAmount 24;}}
-class RLP_Kahuna : RLP_Weapon replaces Shotgun // for now
+class RLP_Kahuna : RLP_Weapon
 {
 	Default
 	{
@@ -10,10 +10,10 @@ class RLP_Kahuna : RLP_Weapon replaces Shotgun // for now
 		Inventory.PickupMessage "$PICKUP_KAHUNA";
 		Tag "$TAG_KAHUNA";
 		+DECOUPLEDANIMATIONS
-		Weapon.AmmoType1 "Shell";
+		Weapon.AmmoType1 "RLP_Shell";
 		Weapon.AmmoUse1 1;
 		Weapon.AmmoGive1 9;
-		Weapon.AmmoType2 "Shell";
+		Weapon.AmmoType2 "RLP_Shell";
 		Weapon.AmmoUse2 1;
 		// Needs an ammo type.
 		// Probably just make a new shell ammo type,

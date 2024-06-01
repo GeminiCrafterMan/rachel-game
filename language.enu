@@ -25,6 +25,7 @@ TXT_COLOR_PURPLE = "Purple";
 TXT_COLOR_MAGENTA = "Magenta";
 
 TXT_TEST = "My Test Level";
+TXT_MAP01 = "Discount First Cave"; // CHANGE LATER!!!
 
 // Weapon pickups
 PICKUP_BLASTER_A = "\c[White]Picked up \c[Sapphire]Blaster A\c[White].";
@@ -39,8 +40,14 @@ TAG_BLASTER_A = "Blaster A";
 TAG_KAHUNA = "Slayer's Kahuna";
 
 // Ammo pickups
+GOTSHELLS = "Picked up a small box of shells.";
 
+// Health item pickups
+GOTJUICE = "Drank a can of juice.";
+
+// ----------------------------------------------------------------------------------------------------- //
 // Universal Weapon Sway (KEEP AT BOTTOM)
+// ----------------------------------------------------------------------------------------------------- //
 MENU_TITLE = "Weapon Sway Options";
 
 HEADER_GEN = "General";

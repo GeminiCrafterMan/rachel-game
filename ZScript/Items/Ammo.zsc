@@ -1,0 +1,18 @@
+class RLP_Shell : Ammo
+{
+	Default
+	{
+		Inventory.PickupMessage "$GOTSHELLS"; // "Picked up a small box of shells."
+		Inventory.Amount 4;
+		Inventory.MaxAmount 50;
+		Ammo.BackpackAmount 4;
+		Ammo.BackpackMaxAmount 100;
+		Inventory.Icon "SHELA0";
+	}
+	States
+	{
+ 		Spawn:
+			M000 A -1;
+			Stop;
+	}
+}

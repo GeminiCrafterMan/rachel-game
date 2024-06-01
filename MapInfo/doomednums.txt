@@ -1,0 +1,6 @@
+DoomEdNums
+{
+	2001 = RLP_Kahuna
+	2008 = RLP_Shell
+	2014 = RLP_JuiceCan
+}

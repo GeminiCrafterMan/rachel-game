@@ -1,0 +1,44 @@
+//-------------------------------------------------------------------------------------------
+// SKILL DEFINITIONS
+//-------------------------------------------------------------------------------------------
+
+Skill baby
+{
+	AutoUseHealth
+	AmmoFactor = 2
+	DamageFactor = 0.5
+	EasyBossBrain
+	SpawnFilter = Baby
+	Name = "$SKILL_BABY"
+}
+
+Skill easy
+{
+	EasyBossBrain
+	SpawnFilter = Easy
+	Name = "$SKILL_EASY"
+}
+
+Skill normal
+{
+	SpawnFilter = Normal
+	Name = "$SKILL_NORMAL"
+	DefaultSkill
+}
+
+Skill hard
+{
+	SpawnFilter = Hard
+	Name = "$SKILL_HARD"
+}
+
+Skill nightmare
+{
+	AmmoFactor = 2
+	FastMonsters
+	DisableCheats
+	RespawnTime = 12
+	SpawnFilter = Nightmare
+	Name = "$SKILL_NIGHTMARE"
+	MustConfirm
+}

@@ -4,7 +4,7 @@ class RLP_Player : PlayerPawn
 	override void Tick()
 	{
 		Super.Tick();
-		if (self.player) // a null check because yeah
+		if (self.player && self.player.ReadyWeapon) // two null checks because yeah
 		{
 			if (self.ShotgunSpreadDelay > 36)
 			{ 
@@ -28,16 +28,9 @@ class RLP_Player : PlayerPawn
 		Player.DisplayName "Rachel";
 		Player.SoundClass "RLP_Player";
 		Player.StartItem "RLP_BlasterA";
-//		Player.StartItem "Fist";
 		Player.StartItem "RLP_QuickKickController";
-		Player.StartItem "Clip", 50;
-//		Player.WeaponSlot 1, "Fist", "Chainsaw";
 		Player.WeaponSlot 2, "RLP_BlasterA";
-		Player.WeaponSlot 3, "RLP_Kahuna";//, "SuperShotgun"; // G: do we really need an SSG with the fucking kahuna around though
-//		Player.WeaponSlot 4, "Chaingun";
-//		Player.WeaponSlot 5, "RocketLauncher";
-//		Player.WeaponSlot 6, "PlasmaRifle";
-//		Player.WeaponSlot 7, "BFG9000";
+		Player.WeaponSlot 3, "RLP_Kahuna";
 
 		Player.ColorRange 200, 207;
 		Player.Colorset 0, "$TXT_COLOR_DEFAULT",		200,207,203;

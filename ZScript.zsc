@@ -1,8 +1,12 @@
 version "4.12.2"
 
 #include "ZScript/Player.zsc"
-#include "ZScript/Weapons.zsc"
 #include "ZScript/HUD.zsc"
+
+// Weapons & Items
+#include "ZScript/Weapons.zsc"
+#include "ZScript/Items/Ammo.zsc"
+#include "ZScript/Items/Health.zsc"
 
 // Universal Weapon Sway
 #include "ZScript/sway/sway.zsc"
