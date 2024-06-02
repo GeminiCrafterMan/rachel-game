@@ -28,15 +28,15 @@ TXT_TEST = "My Test Level";
 TXT_MAP01 = "Discount First Cave"; // CHANGE LATER!!!
 
 // Weapon pickups
-PICKUP_BLASTER_A = "\c[White]Picked up \c[Sapphire]Blaster A\c[White].";
+PICKUP_EVENING_STAR = "\c[White]Picked up the \c[Orange]Evening Star\c[White].";
 PICKUP_KAHUNA = "\c[White]Picked up the \c[Red]Slayer's Kahuna\c[White].";
 
 // Weapon obituaries
-OB_BLASTER_A = "%o was plinked to death by %k's \c[Sapphire]Blaster A\c[Gold].";
+OB_EVENING_STAR = "%o was plinked to death by %k's \c[Sapphire]Evening Star\c[Gold].";
 OB_KAHUNA = "%o caught the wave (of pellets) produced by %k's Slayer's Kahuna.";
 
 // Weapon tags
-TAG_BLASTER_A = "Blaster A";
+TAG_EVENING_STAR = "Evening Star";
 TAG_KAHUNA = "Slayer's Kahuna";
 
 // Ammo pickups

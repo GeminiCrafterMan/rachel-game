@@ -14,16 +14,16 @@ Model RLP_QuickKickController
 	Scale 15 15 15
 	BaseFrame // Decoupled animations REQUIRE this
 }
-Model RLP_BlasterA
+Model RLP_EveningStar
 {
 	Path "Models/Player/"
-	Model 0 "Weapons/blasterA.iqm"
+	Model 0 "Weapons/Evening Star-hands.iqm"
 	Skin 0 "geminiTexture.png"
-	Scale 15 15 15
-	SCALEWEAPONFOV
+	Scale 30 30 30 // for the world model
+	ROTATING
 	BaseFrame // Decoupled animations REQUIRE this
 }
-Model RLP_BlasterA_Projectile
+Model RLP_EveningStar_Projectile
 {
 	Path "Models/Player/Weapons/Projectiles" // Path to model in PK3
 	SKIN 0 "PLSSA0.png" // Model index, model file
@@ -39,7 +39,7 @@ Model RLP_BlasterA_Projectile
 Model RLP_Kahuna
 {
 	Path "Models/Player/"
-	Model 0 "Weapons/Shotgun-hands.iqm"
+	Model 0 "Weapons/Kahuna-hands.iqm"
 	Skin 0 "geminiTexture.png"
 	Scale 15 15 15
 	ROTATING

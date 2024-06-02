@@ -1,5 +1,5 @@
-weapons/blaster_a/fire		"Sounds/Weapons/Blaster A/fire.wav"
-weapons/blaster_a/explode	"Sounds/Weapons/Blaster A/explode.wav"
+weapons/evening_star/fire		"Sounds/Weapons/Evening Star/fire.wav"
+weapons/evening_star/explode	"Sounds/Weapons/Evening Star/explode.wav"
 
 weapons/kahuna/empty		"Sounds/Weapons/Slayer's Kahuna/empty.wav"
 weapons/kahuna/fire1		"Sounds/Weapons/Slayer's Kahuna/Fire1.wav"

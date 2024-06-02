@@ -16,10 +16,13 @@ Geno (@LukasATBK on Twitter):
 
 Denis Belmondo:
 - ZFootsteps
+Valve Software:
+- Left 4 Dead & Half-Life 2 footstep sounds (see above)
+- Half-Life 2 - suit_denydevice.wav
 
 Sketchfab credits:
+"stylized_gun" (https://skfb.ly/oEHLA) by Vladyslav Holhanov is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 "Low poly assets" (https://skfb.ly/6QSnP) by cerura vinula is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
-"Yummy low poly pack" (https://skfb.ly/6WNrq) by MaryGraz is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 
-Cave Story MD contributors:
-- Temporary Cave Story music in the form of VGMs
+Studio Pixel:
+- Cave Story music (temporary)

@@ -27,9 +27,9 @@ class RLP_Player : PlayerPawn
 		PainChance 255;
 		Player.DisplayName "Rachel";
 		Player.SoundClass "RLP_Player";
-		Player.StartItem "RLP_BlasterA";
+		Player.StartItem "RLP_EveningStar";
 		Player.StartItem "RLP_QuickKickController";
-		Player.WeaponSlot 2, "RLP_BlasterA";
+		Player.WeaponSlot 2, "RLP_EveningStar";
 		Player.WeaponSlot 3, "RLP_Kahuna";
 
 		Player.ColorRange 200, 207;
