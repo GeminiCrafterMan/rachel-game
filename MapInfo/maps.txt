@@ -16,3 +16,11 @@ Map "MAP01" "$TXT_MAP01"
 	Music = "gestation"
 	Next = "MAP02"
 }
+
+Map "RANGE" "$TXT_RANGE"
+{
+	LightMode = 3
+	Sky1 = "HAZESKY8"
+	Next = "RANGE"
+	Music = "mischievous robot"
+}

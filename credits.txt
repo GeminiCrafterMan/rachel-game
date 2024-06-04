@@ -1,10 +1,6 @@
 FreeDoom Contributors:
-- DSFIRXPL
-- Plasma Rifle projectile sprites (Blaster A)
+- Plasma Rifle projectile sprites (Evening Star)
 - Literally every flat and texture from FreeDoom/FreeDM
-
-Chafmere:
-- Godot 4 FPS Controller models (the Blasters)
 
 Nash Muhandes and Boondorl:
 - Universal Weapon Sway
@@ -21,8 +17,12 @@ Valve Software:
 - Half-Life 2 - suit_denydevice.wav
 
 Sketchfab credits:
-"stylized_gun" (https://skfb.ly/oEHLA) by Vladyslav Holhanov is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+"stylized_gun" (https://skfb.ly/oEHLA) by Vladyslav Holhanov is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). (Used for "Evening Star")
 "Low poly assets" (https://skfb.ly/6QSnP) by cerura vinula is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 
 Studio Pixel:
 - Cave Story music (temporary)
+- Cave Story sound effects (temporary)
+
+Matt Eldrydge:
+- Shooting Range map

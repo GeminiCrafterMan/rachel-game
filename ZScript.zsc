@@ -8,6 +8,9 @@ version "4.12.2"
 #include "ZScript/Items/Ammo.zsc"
 #include "ZScript/Items/Health.zsc"
 
+// Enemies
+#include "ZScript/Enemies.zsc"
+
 // Universal Weapon Sway
 #include "ZScript/sway/sway.zsc"
 #include "ZScript/sway/menu.zsc"

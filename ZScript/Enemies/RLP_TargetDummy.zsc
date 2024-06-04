@@ -1,0 +1,73 @@
+class RLP_TargetDummy : Actor
+{
+	Default
+	{
+		scale 1.0;
+		obituary "%o was somehow killed by an unarmed monster.";
+		health 9999999;
+		radius 15;
+		height 54;
+		mass 5;
+		speed 8;
+		painchance 256;
+		painsound "TRGTPN";
+		Tag "Target";
+		MONSTER;
+		BloodType "RLP_TargetDummySmoke";
+		Scale 0.7;
+		+BUDDHA
+		+DONTTHRUST
+		+FLOORCLIP
+		-COUNTKILL
+		+MISSILEEVENMORE
+		+AMBUSH
+		+NOBLOODDECALS
+	}
+	states
+	{
+		Spawn:
+			TRGT A 1;
+			Goto See;
+		See:
+			TRGT A 10;
+			loop;
+		Pain:
+			TRGT B 3 A_Pain;
+			TRGT CADACADACADA 3;
+			goto See;
+		Death:
+			TRGT J 5 A_Scream;
+			stop;
+	}
+}
+
+class RLP_TargetDummySmoke : Actor
+{
+	Default
+	{
+		+NOGRAVITY
+		+NOBLOCKMAP
+		+FLOORCLIP
+		+FORCEXYBILLBOARD
+		+CLIENTSIDEONLY
+		+NOINTERACTION
+		+DONTSPLASH
+		+MISSILE
+		RenderStyle "Add";
+		Scale 0.3;
+		Alpha 0.3;
+		Radius 0;
+		Height 0;
+		Speed 1;
+	}
+	States
+	{
+		Spawn:
+			NULL A 1 A_SetTranslucent(0.25);
+			SMKN ABCDEFGHI 2 A_FadeOut(0.005);
+			SMKN JKLMN 3 A_FadeOut(0.005);
+			SMKN OPQR 4 A_FadeOut(0.005);
+			TNT1 A 0;
+			Stop;
+	}
+}
