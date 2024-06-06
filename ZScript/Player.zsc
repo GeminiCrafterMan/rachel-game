@@ -58,7 +58,6 @@ class RLP_Player : PlayerPawn
 		See:
 			M000 A 1 SetAnimation('Walk', 60, endFrame: 39, flags: SAF_LOOP|SAF_NOOVERRIDE);
 			Loop;
-		Melee:
 		Missile:
 			M000 A 20 SetAnimation('Fire', loopFrame: 6, flags: SAF_LOOP);
 			Goto Spawn;
@@ -67,7 +66,6 @@ class RLP_Player : PlayerPawn
 			M000 A 4 A_Pain;
 			Goto Spawn;
 		Death:
-		XDeath:
 			M000 A 10 SetAnimation('Death');
 			M000 A 10 A_PlayerScream;
 			M000 A -1 A_NoBlocking;
@@ -121,7 +119,7 @@ class RLP_QuickKickController : CustomInventory
 			{
 //				Console.Printf("Did effect");
 				// Check if +user2 is pressed:
-				if (!player.PlayerState == PST_DEAD && player.cmd.buttons & BT_USER2)
+				if (player.health > 0 && player.cmd.buttons & BT_USER2)
 				{
 					// move to DoKick if so:
 					return ResolveState("DoKick");
@@ -136,9 +134,7 @@ class RLP_QuickKickController : CustomInventory
 				invoker.SetAnimation('Kick', 40);
 //				A_OverlayTranslation(OverlayID(), "Ice"); // maybe mess with this for an "iron shoes" kick powerup?
 			}
-//			KICK AB 2;
-//			KICK CD 1;
-			KICK E 3 {
+			M000 A 15 {
 				// redo this shit later
 				int dmg = 11;
 				if (FindInventory("PowerStrength"))
@@ -149,15 +145,6 @@ class RLP_QuickKickController : CustomInventory
 				{
 					A_CustomPunch(dmg, norandom:true, flags: 0, /*pufftype: "GWM_KickPuff", */range: meleeRange + 20, meleesound: "*fist");
 				}
-			}
-			KICK DCB 3;
-			KICK A 3
-			{
-				if (player.cmd.buttons & BT_USER2 && player.oldbuttons & BT_USER2)
-				{
-					return ResolveState("DoKick");
-				}
-				return ResolveState(null);
 			}
 			goto ReadyKick; //Note that we go back to ready from here
 	}
