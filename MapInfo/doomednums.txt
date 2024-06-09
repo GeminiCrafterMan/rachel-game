@@ -1,8 +1,15 @@
 DoomEdNums
 {
+	// Weapons
 	2001 = RLP_Kahuna
+
+	// Ammo
 	2008 = RLP_Shell
+
+	// Items
 	2014 = RLP_JuiceCan
 	
+	// Enemies
+	3004 = RLP_RobotBug
 	10002 = RLP_TargetDummy
 }

@@ -2,8 +2,7 @@ class RLP_JuiceCan : Health
 {
 	Default
 	{
-		//$Category "Items/Health"
-		//$Sprite JCANA0
+		//$Category "Health and Armor"
 		//$Title "Juice Can
 		Inventory.Amount 3;
 		Inventory.PickupMessage "$GOTJUICE"; // "Drank a can of juice."
@@ -11,7 +10,7 @@ class RLP_JuiceCan : Health
 	States
 	{
 		Spawn:
-			TNT1 A 0 NoDelay A_Jump(256, "Placeholder", "Placeholder2");
+			M000 A 0 NoDelay A_Jump(256, "Placeholder", "Placeholder2");
 			Stop;
 		Placeholder:
 			M000 A -1 A_ChangeModel("", skinindex: 0, skinpath: "Models/Pickups/", skin: "can1.png");

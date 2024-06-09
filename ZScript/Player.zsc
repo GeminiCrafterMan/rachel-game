@@ -139,13 +139,20 @@ class RLP_QuickKickController : CustomInventory
 				int dmg = 11;
 				if (FindInventory("PowerStrength"))
 				{
-					A_CustomPunch(dmg*10, norandom:true, flags: 0, /*pufftype: "GWM_BerserkPuff", */range: meleeRange + 20, meleesound: "*fist");
+					A_CustomPunch(dmg*10, norandom:true, flags: 0, pufftype: "RLP_KickPuff", range: meleeRange + 20, meleesound: "*fist"); // Berserk, if it still exists by the time I get back to this
 				}
 				else
 				{
-					A_CustomPunch(dmg, norandom:true, flags: 0, /*pufftype: "GWM_KickPuff", */range: meleeRange + 20, meleesound: "*fist");
+					A_CustomPunch(dmg, norandom:true, flags: 0, pufftype: "RLP_KickPuff", range: meleeRange + 20, meleesound: "*fist");
 				}
 			}
 			goto ReadyKick; //Note that we go back to ready from here
+	}
+}
+class RLP_KickPuff : BulletPuff
+{
+	Default
+	{
+		DamageType "Kick";
 	}
 }

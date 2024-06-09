@@ -2,23 +2,23 @@ FreeDoom Contributors:
 - Plasma Rifle projectile sprites (Evening Star)
 - Literally every flat and texture from FreeDoom/FreeDM
 
+Sonic Team Junior:
+- SRB2 PLAYPAL and COLORMAP
+
 Nash Muhandes and Boondorl:
 - Universal Weapon Sway
 
 Geno (@LukasATBK on Twitter):
 - Rachel model
 - Slayer's Kahuna model
++softest_poly, funkysandwich:
 - General Blender assistance
 
 Denis Belmondo:
 - ZFootsteps
-Valve Software:
-- Left 4 Dead & Half-Life 2 footstep sounds (see above)
++Valve Software:
+- Left 4 Dead & Half-Life 2 footstep sounds
 - Half-Life 2 - suit_denydevice.wav
-
-Sketchfab credits:
-"stylized_gun" (https://skfb.ly/oEHLA) by Vladyslav Holhanov is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). (Used for "Evening Star")
-"Low poly assets" (https://skfb.ly/6QSnP) by cerura vinula is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 
 Studio Pixel:
 - Cave Story music (temporary)
@@ -26,3 +26,10 @@ Studio Pixel:
 
 Matt Eldrydge:
 - Shooting Range map
+
+Sketchfab:
+"stylized_gun" (https://skfb.ly/oEHLA) by Vladyslav Holhanov is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). (Used for "Evening Star")
+"Low poly assets" (https://skfb.ly/6QSnP) by cerura vinula is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
+OpenGameArt.org:
+- VSG: Low Poly Bug Robot (UV mapped by Gemini0, as GZDoom doesn't support vertex colors)

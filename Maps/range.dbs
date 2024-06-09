@@ -5,7 +5,7 @@ strictpatches = 0;
 maps
 {
 	
-	MAP01
+	RANGE
 	{
 		
 		resources
@@ -21,11 +21,11 @@ maps
 				requiredarchives = "";
 			}
 		}
-		defaultfloortexture = "FLAT5_7";
-		defaultceiltexture = "F_SKY1";
-		defaulttoptexture = "A-BROCK2";
-		defaultwalltexture = "A-BROCK2";
-		defaultbottomtexture = "A-BROCK2";
+		defaultfloortexture = "FLOOR3_3";
+		defaultceiltexture = "CEIL3_5";
+		defaulttoptexture = "MIDBARS1";
+		defaultwalltexture = "MIDBARS1";
+		defaultbottomtexture = "MIDBARS1";
 		custombrightness = 196;
 		customfloorheight = 0;
 		customceilheight = 128;
@@ -38,9 +38,9 @@ maps
 		overrideceilheight = false;
 		overridebrightness = false;
 		uselongtexturenames = false;
-		viewpositionx = 69.46609f;
-		viewpositiony = 189.2921f;
-		viewscale = 2.413401f;
+		viewpositionx = -118.5399f;
+		viewpositiony = 411.7245f;
+		viewscale = 1.428048f;
 		scriptcompiler = "zdoom_acs.cfg";
 		
 		grid

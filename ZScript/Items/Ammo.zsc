@@ -2,6 +2,8 @@ class RLP_Shell : Ammo
 {
 	Default
 	{
+		//$Category "Ammunition
+		//$Title "Shells
 		Inventory.PickupMessage "$GOTSHELLS"; // "Picked up a small box of shells."
 		Inventory.Amount 4;
 		Inventory.MaxAmount 50;
