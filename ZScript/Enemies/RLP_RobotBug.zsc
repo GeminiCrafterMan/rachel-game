@@ -1,4 +1,4 @@
-class RLP_RobotBug : Actor
+class RLP_RobotBug : RLP_Monster
 {
 	Default
 	{
@@ -6,13 +6,13 @@ class RLP_RobotBug : Actor
 		//$Category "Monsters"
 		BloodColor "370000";
 		Tag "$TAG_ROBOTBUG";
-		Health 60;
-		Monster;
-		Height 32;
-		Radius 28;
-		Speed 8;
-		+DECOUPLEDANIMATIONS
+		Health 120;
+		Height 28;
+		Radius 21;
+		Speed 6;
 		DamageFactor "Kick", 0.5;
+		DamageFactor "Drill", 2;
+		MeleeRange 44*5;
 	}
 	States
 	{
@@ -23,13 +23,24 @@ class RLP_RobotBug : Actor
 			}
 			Loop;
 		See:
-			M000 AAA 1 {
-				SetAnimation('Walk', 60, flags: SAF_LOOP|SAF_NOOVERRIDE);
-				A_Chase(); // replace with zscript pathfinding shit later
-			}
 			M000 A 1 {
 				SetAnimation('Walk', 60, flags: SAF_LOOP|SAF_NOOVERRIDE);
+				A_PortedChase();
 			}
 			Loop;
+/*		Melee:
+			M000 AAAAA 4 {
+				SetAnimation('Charge', 60, flags: SAF_NOOVERRIDE);
+				A_FaceTarget();
+			}
+			M000 AAA 1 {
+				VelFromAngle(Self.Speed*4);
+//				A_CustomMeleeAttack()
+			}
+			M000 AAAAAAAA 1;
+			Goto Spawn;*/
+		Death:
+			M000 A -1 {SetAnimation('Dead');}
+			Stop;
 	}
 }

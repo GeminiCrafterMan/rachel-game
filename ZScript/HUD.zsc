@@ -12,8 +12,8 @@ class RLP_HUD : BaseStatusBar
 		SetSize(0, 320, 200);
 
 		// Create the font used for the fullscreen HUD
-		Font fnt = "BigUpper";
-		mHUDFont = HUDFont.Create(fnt, 2, false, 2, 2);
+		Font fnt = "HUDFONT_DOOM";
+		mHUDFont = HUDFont.Create(fnt, fnt.GetCharWidth("0"), true);
 		fnt = "INDEXFONT_DOOM";
 		mIndexFont = HUDFont.Create(fnt, fnt.GetCharWidth("0"), Mono_CellLeft);
 		mAmountFont = HUDFont.Create("INDEXFONT");
@@ -34,35 +34,69 @@ class RLP_HUD : BaseStatusBar
 	{
 		Vector2 iconbox = (40, 20);
 		// Draw health
-		let berserk = CPlayer.mo.FindInventory("PowerStrength");
-		DrawImage(berserk? "PSTRA0" : "MEDIA0", (20, -2));
-		DrawString(mHUDFont, FormatNumber(CPlayer.health, 3), (44, -20));
+//		let berserk = CPlayer.mo.FindInventory("PowerStrength");
+//		DrawImage(berserk? "PSTRA0" : "MEDIA0", (20, -2));
+
+		DrawImage("Graphics/HUD/healthbar.png", (74, -24));
+		if (CPlayer.Health == 0) // blank
+			DrawBar("Graphics/HUD/bar_empty.png", "Graphics/HUD/bar_empty.png", CPlayer.Health, 0, (86, -24), 0, 0);
+		else if (CPlayer.Health > 0 && CPlayer.Health <= 100) // red
+			DrawBar("Graphics/HUD/bar_red.png", "Graphics/HUD/bar_empty.png", CPlayer.Health, 100, (86, -24), 0, 0);
+		else if (CPlayer.Health > 100 && CPlayer.Health <= 200) // purple
+			DrawBar("Graphics/HUD/bar_purple.png", "Graphics/HUD/bar_red.png", CPlayer.Health-100, 100, (86, -24), 0, 0);
+		else if (CPlayer.Health > 200 && CPlayer.Health <= 300) // blue
+			DrawBar("Graphics/HUD/bar_blue.png", "Graphics/HUD/bar_purple.png", CPlayer.Health-200, 100, (86, -24), 0, 0);
+		else if (CPlayer.Health > 300 && CPlayer.Health <= 400) // teal
+			DrawBar("Graphics/HUD/bar_teal.png", "Graphics/HUD/bar_blue.png", CPlayer.Health-300, 100, (86, -24), 0, 0);
+		else if (CPlayer.Health > 400 && CPlayer.Health <= 500) // green
+			DrawBar("Graphics/HUD/bar_green.png", "Graphics/HUD/bar_teal.png", CPlayer.Health-400, 100, (86, -24), 0, 0);
+		else if (CPlayer.Health > 500 && CPlayer.Health <= 600) // gold
+			DrawBar("Graphics/HUD/bar_gold.png", "Graphics/HUD/bar_green.png", CPlayer.Health-500, 100, (86, -24), 0, 0);
+		else if (CPlayer.Health > 600) // gray
+			DrawBar("Graphics/HUD/bar_gray.png", "Graphics/HUD/bar_gold.png", CPlayer.Health-600, 100, (86, -24), 0, 0);
+
+		DrawImage("Graphics/HUD/armorbar.png", (74, -4));
+		if (GetArmorAmount() == 0) // blank
+			DrawBar("Graphics/HUD/bar_empty.png", "Graphics/HUD/bar_empty.png", GetArmorAmount(), 0, (86, -4), 0, 0);
+		else if (GetArmorAmount() > 0 && GetArmorAmount() <= 100) // green
+			DrawBar("Graphics/HUD/bar_green.png", "Graphics/HUD/bar_empty.png", GetArmorAmount(), 100, (86, -4), 0, 0);
+		else if (GetArmorAmount() > 100) // teal
+			DrawBar("Graphics/HUD/bar_teal.png", "Graphics/HUD/bar_green.png", GetArmorAmount()-100, 100, (86, -4), 0, 0);
+
+	// And now a word from this video's sponsor:
+	// Money. Money can help.
+	// Money finance bills money charges spending money customers
+	// dollars purse dollars money free premium money budgets.
+	// I think money is great!
+	// ~DaThings, "{YTP} ~ Speedfolded", 1:08
+		int money, maxmoney;
+		[money, maxmoney] = GetAmount('RLP_Currency');
+		DrawImage("Graphics/HUD/money.png", (-74, -4));
+		DrawString(mHUDFont, FormatNumber(money, 5, 5, 2), (-46, -20), DI_TEXT_ALIGN_RIGHT);
+
+//		DrawString(mHUDFont, FormatNumber(CPlayer.health, 3), (44, -20));
 		
-		let armor = CPlayer.mo.FindInventory("BasicArmor");
-		if (armor != null && armor.Amount > 0)
-		{
-			DrawInventoryIcon(armor, (20, -22));
-			DrawString(mHUDFont, FormatNumber(armor.Amount, 3), (44, -40));
-		}
 		Inventory ammotype1, ammotype2;
 		[ammotype1, ammotype2] = GetCurrentAmmo();
-		int invY = -20;
-		if (ammotype1 != null)
+		if (ammotype1 == null)
 		{
-			DrawInventoryIcon(ammotype1, (-14, -4));
-			DrawString(mHUDFont, FormatNumber(ammotype1.Amount, 3), (-30, -20), DI_TEXT_ALIGN_RIGHT);
-			invY -= 20;
+			DrawImage("Graphics/HUD/ammo0.png", (-34, -24));
+		}
+		if (ammotype1 != null && (ammotype2 == null || ammotype2 == ammotype1))
+		{
+			DrawImage("Graphics/HUD/ammo1.png", (-58, -24));
+			DrawString(mHUDFont, FormatNumber(ammotype1.Amount, 3, 3, 2), (-46, -40), DI_TEXT_ALIGN_RIGHT);
 		}
 		if (ammotype2 != null && ammotype2 != ammotype1)
 		{
-			DrawInventoryIcon(ammotype2, (-14, invY + 17));
-			DrawString(mHUDFont, FormatNumber(ammotype2.Amount, 3), (-30, invY), DI_TEXT_ALIGN_RIGHT);
-			invY -= 20;
+			DrawImage("Graphics/HUD/ammo2.png", (-86, -24));
+			DrawString(mHUDFont, FormatNumber(ammotype1.Amount, 3, 3, 2), (-46, -40), DI_TEXT_ALIGN_RIGHT);
+			DrawString(mHUDFont, FormatNumber(ammotype2.Amount, 3, 3, 2), (-102, -40), DI_TEXT_ALIGN_RIGHT);
 		}
 		if (!isInventoryBarVisible() && !Level.NoInventoryBar && CPlayer.mo.InvSel != null)
 		{
-			DrawInventoryIcon(CPlayer.mo.InvSel, (-14, invY + 17), DI_DIMDEPLETED);
-			DrawString(mHUDFont, FormatNumber(CPlayer.mo.InvSel.Amount, 3), (-30, invY), DI_TEXT_ALIGN_RIGHT);
+			DrawInventoryIcon(CPlayer.mo.InvSel, (-14, -24 + 17), DI_DIMDEPLETED);
+			DrawString(mHUDFont, FormatNumber(CPlayer.mo.InvSel.Amount, 3), (-30, -24), DI_TEXT_ALIGN_RIGHT);
 		}
 		if (deathmatch)
 		{

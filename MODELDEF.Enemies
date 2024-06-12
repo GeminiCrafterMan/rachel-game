@@ -3,7 +3,7 @@ Model RLP_RobotBug
 	Path "Models/"
 	Model 0 "Enemies/Robot_bug.iqm"
 	Skin 0 "COLORMAP.png"
-	Scale 0.5 0.5 0.5
+	Scale 0.4 0.4 0.4
 	AngleOffset 90
 	BaseFrame // Decoupled animations REQUIRE this
 

@@ -7,11 +7,11 @@ Episode map01
 {
 	Name = "$TXT_MAP01_NAME"
 }
-Episode test
-{
-	Name = "$TXT_TEST_NAME"
-}
 Episode range
 {
 	Name = "$TXT_RANGE_NAME"
+}
+Episode test
+{
+	Name = "$TXT_TEST_NAME"
 }

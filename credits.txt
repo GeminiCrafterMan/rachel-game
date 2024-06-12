@@ -8,7 +8,10 @@ Sonic Team Junior:
 Nash Muhandes and Boondorl:
 - Universal Weapon Sway
 
-Geno (@LukasATBK on Twitter):
+Nash Muhandes, Don McCurdy, Ricardo Luis, Custodian:
+- ZNav
+
+[Geno](https://twitter.com/LukasATBK) (@LukasATBK on Twitter):
 - Rachel model
 - Slayer's Kahuna model
 +softest_poly, funkysandwich:
@@ -32,4 +35,5 @@ Sketchfab:
 "Low poly assets" (https://skfb.ly/6QSnP) by cerura vinula is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 
 OpenGameArt.org:
-- VSG: Low Poly Bug Robot (UV mapped by Gemini0, as GZDoom doesn't support vertex colors)
+- [VSG](https://opengameart.org/users/vsg): Low Poly Bug Robot (UV mapped by Gemini0, as GZDoom doesn't support vertex colors)
+- [Buch](https://opengameart.org/users/buch): Shiny HUD 

@@ -1,3 +1,11 @@
+class RLP_Currency : Inventory
+{
+	Default
+	{
+		Inventory.MaxAmount 99999;
+	}
+}
+
 class RLP_Player : PlayerPawn
 {
 	int ShotgunSpreadDelay;

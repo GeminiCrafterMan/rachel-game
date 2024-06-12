@@ -1,3 +1,4 @@
-#include "ZScript/Enemies/RLP_TargetDummy.zsc" // Range map target dummy, give it a proper model later maybe?
+#include "./Enemies/RLP_Monster.zsc" // Base class
+#include "./Enemies/RLP_TargetDummy.zsc" // Range map target dummy, give it a proper model later maybe?
 
-#include "ZScript/Enemies/RLP_RobotBug.zsc"	// Robot Bug
+#include "./Enemies/RLP_RobotBug.zsc"	// Robot Bug

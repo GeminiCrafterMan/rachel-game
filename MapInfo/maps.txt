@@ -2,13 +2,6 @@
 // MAP DEFINITIONS
 //-------------------------------------------------------------------------------------------
 
-Map "TEST" "$TXT_TEST"
-{
-	LightMode = 3
-	Sky1 = "textures/sky1.png"
-	Music = "Tek2"
-}
-
 Map "MAP01" "$TXT_MAP01"
 {
 	LightMode = 3
@@ -17,10 +10,17 @@ Map "MAP01" "$TXT_MAP01"
 	Next = "MAP02"
 }
 
-Map "RANGE" "$TXT_RANGE"
+
+// Test maps
+Map "RANGE" "$TXT_RANGE" // Firing Range
 {
 	LightMode = 3
 	Sky1 = "HAZESKY8"
-	Next = "RANGE"
 	Music = "mischievous robot"
+}
+Map "TEST" "$TXT_TEST" // Test Map
+{
+	LightMode = 3
+	Sky1 = "textures/sky1.png"
+	Music = "Tek2"
 }

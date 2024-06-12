@@ -1,5 +1,5 @@
-#include "ZScript/Weapons/RLP_EveningStar.zsc"
-#include "ZScript/Weapons/RLP_Kahuna.zsc"
+#include "./Weapons/RLP_EveningStar.zsc"
+#include "./Weapons/RLP_Kahuna.zsc"
 
 class RLP_Weapon : Weapon
 {
