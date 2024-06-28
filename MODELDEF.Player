@@ -1,10 +1,9 @@
 Model RLP_Player
 {
-	Path "Models/Player/"
-	Model 0 "world.iqm"
-	Skin 0 "geminiTexture.png"
-	Model 1 "world-gun.iqm"
-	Skin 1 "Weapons/StarTexture.png"
+	Model 0 "Models/Player/world.iqm"
+	Skin 0 "RACH0000"
+	Model 1 "Models/Player/world-gun.iqm"
+	Skin 1 "Models/Player/Weapons/StarTexture.png"
 	MODELSAREATTACHMENTS
 	Scale 15 15 15
 	BaseFrame // Decoupled animations REQUIRE this
@@ -13,9 +12,8 @@ Model RLP_Player
 }
 Model RLP_QuickKickController
 {
-	Path "Models/Player/"
-	Model 0 "Weapons/leggy.iqm"
-	Skin 0 "geminiTexture.png"
+	Model 0 "Models/Player/Weapons/leggy.iqm"
+	Skin 0 "Textures/Models/Player/rachel_base.png"
 	Scale 15 15 15
 	BaseFrame // Decoupled animations REQUIRE this
 }

@@ -1,0 +1,5 @@
+TEXTURE RACHNORM // Rachel's neutral expression. Generally follows the timing of NES Mega Man.
+	PIC RACHNOR0 tics 45
+	PIC RACHNOR1 tics 6
+	PIC RACHNOR2 tics 2
+	PIC RACHNOR3 tics 2
