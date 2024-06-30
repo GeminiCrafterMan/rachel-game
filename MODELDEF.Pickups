@@ -1,9 +1,8 @@
 Model RLP_JuiceCan
 {
-	Path "Models/Pickups/"
-	Model 0 "can.obj"
-	Skin 0 "can1.png"
-	Scale 15 15 15
+	Path "Models/Pickups/Food/"
+	Model 0 "soda-can.obj"
+	Scale 50 50 50
 	ROTATING
 
 	FrameIndex M000 A 0 0

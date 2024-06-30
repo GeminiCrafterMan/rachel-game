@@ -1,0 +1,104 @@
+class RLP_MissileLauncher : RLP_Weapon replaces RocketLauncher
+{
+	Default
+	{
+		//$Title "Missile Launcher
+		Weapon.SelectionOrder 2500;
+		+WEAPON.NOAUTOFIRE
+		+DECOUPLEDANIMATIONS
+		Inventory.PickupSound "weapons/mlauncher/pickup";
+		Inventory.PickupMessage "$PICKUP_MISSILE_LAUNCHER";
+		Tag "$TAG_MISSILE_LAUNCHER";
+		Weapon.AmmoType "RLP_MissileAmmo";
+		Weapon.AmmoUse 1;
+		Weapon.AmmoGive 5;
+	}
+	States
+	{
+		Spawn:
+			SKSG A -1 NoDelay { // needs a sprite
+				A_ChangeModel("RLP_MissileLauncher", 1, "", "", 1, "", "", 0, 0); // remove model
+				invoker.SetAnimation('Spawn', flags: SAF_INSTANT);
+			}
+			Stop;
+		Ready:
+			M000 A 1 {
+				A_WeaponReady();
+				invoker.SetAnimation('Idle', flags: SAF_INSTANT|SAF_NOOVERRIDE);
+			}
+			Loop;
+		Select:
+			M000 A 1 {
+				A_OverlayFlags(OverlayID(), PSPF_ADDWEAPON|PSPF_ADDBOB|PSPF_PLAYERTRANSLATED, true);
+				A_ChangeModel("RLP_MissileLauncher", 1, "Models/Player/Weapons", "Missile Launcher-hands.iqm", 1, "Textures/Models/Player", "rachel_base.png", 0, 0);
+				A_Raise(18);
+				invoker.SetAnimation('Idle', flags: SAF_INSTANT);
+			}
+			Loop;
+		Deselect:
+			M000 A 1 {
+				A_Lower(18);
+				invoker.SetAnimation('Idle', flags: SAF_INSTANT);
+			}
+			Loop;
+		Fire:
+			M000 A 6 Bright {
+				A_ChangeVelocity(-Cos(pitch)*2, 0, sin(pitch)*2,CVF_RELATIVE);
+				A_QuakeEx(1.5, 1.5, 1.5, 4, 0, 1, "", QF_SHAKEONLY);
+				A_StartSound("weapons/mlauncher/fire", CHAN_AUTO);
+				A_FireProjectile("RLP_Missile", spawnofs_xy: 12, spawnheight: 4);
+				invoker.SetAnimation('Fire');
+			}
+			M000 A 10;
+			M000 A 0 A_ReFire;
+			Goto Ready;
+	}
+}
+
+class RLP_Missile : Actor
+{
+	Default
+	{
+		Radius 2;
+		Height 2;
+		Speed 35;
+		DamageType "Explosive";
+		Projectile;
+		+RANDOMIZE
+		+DEHEXPLOSION
+		+ROCKETTRAIL
+		+EXPLODEONWATER
+		DeathSound "weapons/mlauncher/explode";
+		Obituary "$OB_MISSILE_LAUNCHER";
+	}
+	States
+	{
+		Spawn:
+			MISS A 1 Bright A_StartSound("weapons/mlauncher/fly", CHAN_BODY, CHANF_LOOPING);
+			Loop;
+		Death:
+			TNT1 A 0 {
+				A_Explode(64,128,0);
+				bFORCERADIUSDMG = true;
+				A_Explode(64,128);
+				A_SpawnItemEx("RLP_Explosion");
+			}
+			Stop;
+	}
+}
+
+class RLP_Explosion : Actor
+{
+	Default
+	{
+		+NOGRAVITY +NOINTERACTION
+	}
+	States
+	{
+		Spawn:
+			MISS B 8 Bright;
+			MISS C 6 Bright;
+			MISS D 4 Bright;
+			Stop;
+	}
+}

@@ -66,8 +66,8 @@ class StepEventHandler : EventHandler
 					{
 						if (wait[i] <= 0.0)
 						{
-							pl.A_PlaySound(getStepSound(pl), CHAN_AUTO,
-									clamp(speed / MAX_SPEED, 0.4, 1.0));
+							pl.A_StartSound(getStepSound(pl), CHAN_AUTO,
+									volume: clamp(speed / MAX_SPEED, 0.4, 1.0)); // G: changed to A_StartSound to silence warning
 							wait[i] = 7.0 * clamp(MAX_SPEED / speed, 1.0, 1.5);
 						}
 						

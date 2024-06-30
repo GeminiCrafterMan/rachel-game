@@ -96,12 +96,14 @@ class RLP_Player : PlayerPawn
 		Height 56;
 		Mass 100;
 		PainChance 255;
+		Player.JumpZ 11;
 		Player.DisplayName "Rachel";
 		Player.SoundClass "RLP_Player";
 		Player.StartItem "RLP_EveningStar";
 		Player.StartItem "RLP_QuickKickController";
 		Player.WeaponSlot 2, "RLP_EveningStar";
 		Player.WeaponSlot 3, "RLP_Kahuna";
+		Player.WeaponSlot 5, "RLP_MissileLauncher";
 
 		Player.ColorRange 200, 207;
 		Player.Colorset 0, "$TXT_COLOR_DEFAULT",		200,207,203;

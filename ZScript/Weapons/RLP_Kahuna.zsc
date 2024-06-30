@@ -5,12 +5,12 @@ class RLP_Kahuna : RLP_Weapon replaces Shotgun // for now, mostly so I can play 
 	{
 		//$Title "Slayer's Kahuna
 		Weapon.SelectionOrder 1900;
-		// absolutely NOT a wimpy weapon
 		+WEAPON.NOAUTOFIRE
+		+DECOUPLEDANIMATIONS
 		Inventory.PickupSound "weapons/kahuna/pickup";
 		Inventory.PickupMessage "$PICKUP_KAHUNA";
 		Tag "$TAG_KAHUNA";
-		+DECOUPLEDANIMATIONS
+		Obituary "$OB_KAHUNA";
 		Weapon.AmmoType1 "RLP_Shell";
 		Weapon.AmmoUse1 1;
 		Weapon.AmmoGive1 9;

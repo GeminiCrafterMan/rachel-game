@@ -124,7 +124,7 @@ class SwayManager : Thinker
 			if ((psp.y ~== prevY[i] && prevY[i] != WEAPONTOP) || psp.y > WEAPONTOP || (vExtend[i].GetBool() && psp.y < WEAPONTOP))
 				psp.y -= (yOffset[i] + vOffset[i]);
 			
-			for (uint j = 0; j < lm[i].layers.Size(); ++j)
+			for (int j = 0; j < lm[i].layers.Size(); ++j) // G: changed J from uint to int, silencing a warning... it doesn't seem like J really ever needed to be unsigned?
 			{
 				let layer = lm[i].layers[j];
 				if (layer)
@@ -228,7 +228,7 @@ class SwayManager : Thinker
 			
 			psp.x -= xOffset[i];
 			
-			for (uint j = 0; j < lm[i].layers.Size(); ++j)
+			for (int j = 0; j < lm[i].layers.Size(); ++j) // G: changed J from uint to int, silencing a warning... it doesn't seem like J really ever needed to be unsigned?
 			{
 				let layer = lm[i].layers[j];
 				if (layer)

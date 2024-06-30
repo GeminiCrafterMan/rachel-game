@@ -1,6 +1,8 @@
+// "EVENING STAR" ENERGY PISTOL
 weapons/evening_star/fire		"Sounds/Weapons/Evening Star/fire.wav"
 weapons/evening_star/explode	"Sounds/Weapons/Evening Star/explode.wav"
 
+// "SLAYER'S KAHUNA" SHOTGUN
 weapons/kahuna/empty		"Sounds/Weapons/Slayer's Kahuna/empty.wav"
 weapons/kahuna/fire1		"Sounds/Weapons/Slayer's Kahuna/Fire1.wav"
 weapons/kahuna/fire2		"Sounds/Weapons/Slayer's Kahuna/Fire2.wav"
@@ -10,3 +12,11 @@ weapons/kahuna/pump1		"Sounds/Weapons/Slayer's Kahuna/Pump1.wav"
 weapons/kahuna/pump2		"Sounds/Weapons/Slayer's Kahuna/Pump2.wav"
 
 $random weapons/kahuna/fire { weapons/kahuna/fire1 weapons/kahuna/fire2 weapons/kahuna/fire3 }
+
+// MISSILE LAUNCHER
+weapons/mlauncher/fire		"Sounds/Weapons/Missile Launcher/fire.wav"
+weapons/mlauncher/fly		"Sounds/Weapons/Missile Launcher/rocket-loop-99748.mp3"
+weapons/mlauncher/explode	"Sounds/Weapons/Missile Launcher/bad-explosion-6855.mp3"
+
+$volume weapons/mlauncher/fly 0.5
+$attenuation weapons/mlauncher/fly 1.5

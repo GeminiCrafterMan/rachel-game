@@ -36,4 +36,9 @@ Sketchfab:
 
 OpenGameArt.org:
 - [VSG](https://opengameart.org/users/vsg): Low Poly Bug Robot (UV mapped by Gemini0, as GZDoom doesn't support vertex colors)
-- [Buch](https://opengameart.org/users/buch): Shiny HUD 
+- [Buch](https://opengameart.org/users/buch): Shiny HUD
+- [devurandom](https://opengameart.org/users/devurandom) & [Clint Bellanger](https://opengameart.org/users/clint-bellanger): Boxy Bold Font+ (Used for SMALLFONT)
+
+Pixabay:
+- Slayer's Kahuna fire and pump sound effects
+- "Bad Explosion", "Rocket Loop", and "Bow Release" (Missile Launcher)
