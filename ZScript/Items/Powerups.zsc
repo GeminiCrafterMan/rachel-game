@@ -1,0 +1,34 @@
+class RLP_Invincibility : PowerupGiver
+{
+	override Bool Use(bool pickup)
+	{
+		S_ChangeMusic("Invincibility");
+		Super.Use(pickup);
+		return true;
+	}
+	Default
+	{
+		+COUNTITEM
+		+INVENTORY.AUTOACTIVATE
+		+INVENTORY.ALWAYSPICKUP
+		+INVENTORY.BIGPOWERUP
+		Inventory.MaxAmount 0;
+		Powerup.Type "RLP_PowerInvincibility";
+		Powerup.Color "None";
+		Inventory.PickupMessage "$GOTINVUL"; // "Invulnerability!"
+	}
+	States
+	{
+		Spawn:
+			PINV ABCD 6 Bright;
+			Loop;
+	}
+}
+class RLP_PowerInvincibility : PowerInvulnerable
+{
+	override void EndEffect()
+	{
+		Super.EndEffect();
+		S_ChangeMusic("*");
+	}
+}

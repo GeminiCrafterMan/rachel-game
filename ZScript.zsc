@@ -5,6 +5,7 @@ version "4.12.2"
 
 // Weapons & Items
 #include "ZScript/Weapons.zsc"
+#include "ZScript/Items/Powerups.zsc"
 #include "ZScript/Items/Ammo.zsc"
 #include "ZScript/Items/Health.zsc"
 
