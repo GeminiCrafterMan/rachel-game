@@ -1,0 +1,33 @@
+// Fuuko, from Marblecheese's game "Starcatcher Marin".
+// She's here my by own request -v-
+// CHOKI CHOKI CHOKI!!
+
+class RLP_Fuuko : Actor
+{
+	Default
+	{
+		Height 46;
+		Radius 10;
+		Health 100;
+		Speed 4;
+		+SOLID
+//		+SHOOTABLE +FRIENDLY
+		+DECOUPLEDANIMATIONS
+	}
+	States
+	{
+		Spawn:
+			M000 A 1 {
+				A_ChangeModel("", skin: "FUUKNORM");
+				SetAnimation('waiting', flags: SAF_LOOP|SAF_NOOVERRIDE);
+//				A_Look();
+			}
+			Loop;
+		See:
+			M000 A 1 {
+				SetAnimation('walking', flags: SAF_LOOP|SAF_NOOVERRIDE);
+//				A_Chase();
+			}
+			Loop;
+	}
+}

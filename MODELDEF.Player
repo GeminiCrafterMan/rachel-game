@@ -1,19 +1,15 @@
 Model RLP_Player
 {
-	Model 0 "Models/Player/world.iqm"
-	Skin 0 "RACH0000"
-	Model 1 "Models/Player/world-gun.iqm"
-	Skin 1 "Models/Player/Weapons/StarTexture.png"
+	Model 0 "Models/Player/world-main.iqm"
+	Skin 0 "RACHNORM"
 	MODELSAREATTACHMENTS
 	Scale 15 15 15
 	BaseFrame // Decoupled animations REQUIRE this
-
-	FrameIndex M000 A 0 0
 }
 Model RLP_QuickKickController
 {
 	Model 0 "Models/Player/Weapons/leggy.iqm"
-	Skin 0 "Textures/Models/Player/rachel_base.png"
+	Skin 0 "Patches/Models/Player/rachel_base.png"
 	Scale 15 15 15
 	BaseFrame // Decoupled animations REQUIRE this
 }

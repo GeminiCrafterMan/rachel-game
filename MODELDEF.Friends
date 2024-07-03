@@ -1,0 +1,13 @@
+Model RLP_Fuuko
+{
+	Model 0 "Models/Friends/Fuuko-main.iqm"
+	Skin 0 "FUUKO01"
+	Model 1 "Models/Friends/Fuuko-cutter.iqm"
+	Skin 1 "FUUKO01"
+	Scale 25 25 25
+	AngleOffset 90
+	MODELSAREATTACHMENTS
+	BaseFrame // Decoupled animations REQUIRE this
+
+	FrameIndex M000 A 0 0
+}

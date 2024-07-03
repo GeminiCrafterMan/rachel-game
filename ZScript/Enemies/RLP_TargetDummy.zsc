@@ -2,7 +2,6 @@ class RLP_TargetDummy : Actor
 {
 	Default
 	{
-		scale 1.0;
 		obituary "%o was somehow killed by an unarmed monster.";
 		health 9999999;
 		radius 15;
@@ -15,6 +14,7 @@ class RLP_TargetDummy : Actor
 		MONSTER;
 		BloodType "RLP_TargetDummySmoke";
 		Scale 0.7;
+		YScale 0.84;
 		+BUDDHA
 		+DONTTHRUST
 		+FLOORCLIP

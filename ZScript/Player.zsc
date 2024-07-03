@@ -12,6 +12,12 @@ class RLP_Player : PlayerPawn
 	override void Tick()
 	{
 		Super.Tick();
+		DoShotgunSpreadDelay();
+		AirAnimationHandler();
+		ModelAttachmentHandler();
+	}
+	void DoShotgunSpreadDelay()
+	{
 		if (self.player && self.player.ReadyWeapon) // two null checks because yeah
 		{
 			if (self.ShotgunSpreadDelay > 36)
@@ -24,14 +30,16 @@ class RLP_Player : PlayerPawn
 			else
 				self.ShotgunSpreadDelay += 3;
 		}
-
+	}
+	void AirAnimationHandler()
+	{
 		// Animation for vertical movement
 		if (self.player && !(self.player.OnGround))
 		{
-			if (self.Vel.Z < 0)
+			if (self.Vel.Z < 0 && !(InStateSequence(CurState, ResolveState('Pain')) || InStateSequence(CurState, ResolveState('Death')) ) )
 				SetState(ResolveState('Fall'));
 // SRB2 port springs already set the Spring state, so will the ones here
-			else if (self.Vel.Z > 0 && !(InStateSequence(CurState, ResolveState('Jump'))))
+			else if (self.Vel.Z > 0 && !(InStateSequence(CurState, ResolveState('Jump')) || InStateSequence(CurState, ResolveState('Pain')) || InStateSequence(CurState, ResolveState('Death')) ) )
 				SetState(ResolveState('Spring'));
 		}
 		else
@@ -39,6 +47,18 @@ class RLP_Player : PlayerPawn
 			if (InStateSequence(CurState, ResolveState('Spring')) || InStateSequence(CurState, ResolveState('Fall')))
 				SetState(ResolveState('Spawn'));
 		}
+	}
+	void ModelAttachmentHandler()
+	{
+		if (CheckInventory("RLP_EveningStar", 1))
+			A_ChangeModel("", 1, "Models/Player", "world-gun.iqm", 1, "Models/Player/Weapons", "StarTexture.png");
+		else // player won't be able to drop or trade it, but if they do...
+			A_ChangeModel("", 1, skinindex: 1);
+
+		if (CheckInventory("RLP_FuukoCutter", 1))
+			A_ChangeModel("", 2, "Models/Player", "world-cutter.iqm", 2, "Patches/Models/Friends/Fuuko", "fuuko_base.png");
+		else
+			A_ChangeModel("", 2, skinindex: 2);
 	}
 	override void CheckJump()
 	{
@@ -93,10 +113,11 @@ class RLP_Player : PlayerPawn
 		Speed 1;
 		Health 100;
 		Radius 16;
-		Height 56;
+		Height 64;
 		Mass 100;
 		PainChance 255;
 		Player.JumpZ 11;
+		Player.ViewHeight 48;
 		Player.DisplayName "Rachel";
 		Player.SoundClass "RLP_Player";
 		Player.StartItem "RLP_EveningStar";
@@ -146,7 +167,7 @@ class RLP_Player : PlayerPawn
 			M000 A -1 A_NoBlocking;
 			Stop;
 		Jump:
-			M000 A 1 SetAnimation('Spring', loopframe: 2, flags: SAF_LOOP|SAF_NOOVERRIDE);
+			M000 A 1 SetAnimation('Jump', loopframe: 2, flags: SAF_LOOP|SAF_NOOVERRIDE);
 			Loop;
 		Spring:
 			M000 A 1 SetAnimation('Spring', loopframe: 2, flags: SAF_LOOP|SAF_NOOVERRIDE);

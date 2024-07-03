@@ -40,3 +40,13 @@ Model RLP_MissileLauncher
 	ROTATING
 	BaseFrame // Decoupled animations REQUIRE this
 }
+
+Model RLP_ThrownCutter
+{
+	Model 0 "Models/Player/Weapons/Projectiles/cutter.obj"
+	Skin 0 "FUUKO01"
+	Scale 30 30 30
+	PITCHFROMMOMENTUM
+
+	FrameIndex M000 A 0 0
+}

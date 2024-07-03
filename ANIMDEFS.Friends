@@ -1,0 +1,4 @@
+TEXTURE FUUKNORM // Fuuko's neutral expression. Generally follows the timing of NES Mega Man.
+	PIC FUUKO01 tics 45
+	PIC FUUKO03 tics 6
+	PIC FUUKO02 tics 4

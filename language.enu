@@ -33,16 +33,21 @@ TXT_MAP01 = "Discount First Cave"; // CHANGE LATER!!!
 PICKUP_EVENING_STAR = "\c[White]Picked up the \c[Orange]Evening Star\c[White].";
 PICKUP_KAHUNA = "\c[White]Picked up the \c[Red]Slayer's Kahuna\c[White].";
 PICKUP_MISSILE_LAUNCHER = "\c[White]Picked up the \c[Yellow]Missile Launcher\c[White].";
-
 // Weapon obituaries
 OB_EVENING_STAR = "%o was plinked to death by %k's \c[Orange]Evening Star\c[Gold].";
 OB_KAHUNA = "%o caught the wave (of pellets) produced by %k's \c[Red]Slayer's Kahuna\c[Gold].";
 OB_MISSILE_LAUNCHER = "%o got turned inside out by %k's \c[Yellow]Missile Launcher\c[Gold].";
-
 // Weapon tags
 TAG_EVENING_STAR = "Evening Star";
 TAG_KAHUNA = "Slayer's Kahuna";
 TAG_MISSILE_LAUNCHER = "Missile Launcher";
+
+// Item pickups
+PICKUP_FUUKO_CUTTER = "\c[White]Picked up \c[Purple]Fuuko\c[White]'s \c[Gold]Cutter\c[White]!";
+// Item obituaries
+OB_FUUKO_CUTTER = "%k made paper dolls out of %k.";
+// Item tags
+TAG_FUUKO_CUTTER = "Fuuko's Cutter";
 
 // Ammo pickups
 GOTSHELLS = "Picked up a small box of shells.";

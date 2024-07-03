@@ -5,9 +5,10 @@ version "4.12.2"
 
 // Weapons & Items
 #include "ZScript/Weapons.zsc"
-#include "ZScript/Items/Powerups.zsc"
-#include "ZScript/Items/Ammo.zsc"
-#include "ZScript/Items/Health.zsc"
+#include "ZScript/Items.zsc"
+
+// Friends
+#include "ZScript/Friends.zsc"
 
 // Enemies
 #include "ZScript/Enemies.zsc"

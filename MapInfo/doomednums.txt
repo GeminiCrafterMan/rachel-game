@@ -11,5 +11,6 @@ DoomEdNums
 	
 	// Enemies
 	3004 = RLP_RobotBug
-	10002 = RLP_TargetDummy
+	10000 = RLP_TargetDummy
+	10001 = RLP_Fuuko
 }

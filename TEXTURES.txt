@@ -5,43 +5,4 @@ Sprite "M000A0", 1, 1
 {
 }
 
-Texture "RACHNORM", 1, 1
-{
-}
-
-Texture "RACHNOR0", 512, 512
-{
-	Patch "RACHEL_B", 0, 0
-	Patch "EYES1", 352, 320
-	Patch "MOUTHS1", 352, 320
-}
-
-Texture "RACHNOR1", 512, 512
-{
-	Patch "RACHEL_B", 0, 0
-	Patch "EYES2", 352, 320
-	Patch "MOUTHS1", 352, 320
-}
-
-Texture "RACHNOR2", 512, 512
-{
-	Patch "RACHEL_B", 0, 0
-	Patch "EYES3", 352, 320
-	Patch "MOUTHS1", 352, 320
-}
-
-Texture "RACHNOR3", 512, 512
-{
-	Patch "RACHEL_B", 0, 0
-	Patch "EYES4", 352, 320
-	Patch "MOUTHS1", 352, 320
-}
-
-Texture "RACHPAIN", 512, 512
-{
-	Patch "RACHEL_B", 0, 0
-	Patch "EYES5", 352, 320
-	Patch "MOUTHS3", 352, 320
-}
-
 // End of texture definitions

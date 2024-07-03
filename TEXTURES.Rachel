@@ -1,0 +1,39 @@
+
+Texture "RACHNORM", 1, 1
+{
+}
+
+Texture "RACHNOR0", 512, 512
+{
+	Patch "Patches/Models/Player/rachel_base.png", 0, 0
+	Patch "Patches/Models/Player/Face/Eyes1.png", 352, 320
+	Patch "Patches/Models/Player/Face/Mouths1.png", 352, 320
+}
+
+Texture "RACHNOR1", 512, 512
+{
+	Patch "Patches/Models/Player/rachel_base.png", 0, 0
+	Patch "Patches/Models/Player/Face/Eyes2.png", 352, 320
+	Patch "Patches/Models/Player/Face/Mouths1.png", 352, 320
+}
+
+Texture "RACHNOR2", 512, 512
+{
+	Patch "Patches/Models/Player/rachel_base.png", 0, 0
+	Patch "Patches/Models/Player/Face/Eyes3.png", 352, 320
+	Patch "Patches/Models/Player/Face/Mouths1.png", 352, 320
+}
+
+Texture "RACHNOR3", 512, 512
+{
+	Patch "Patches/Models/Player/rachel_base.png", 0, 0
+	Patch "Patches/Models/Player/Face/Eyes4.png", 352, 320
+	Patch "Patches/Models/Player/Face/Mouths1.png", 352, 320
+}
+
+Texture "RACHPAIN", 512, 512
+{
+	Patch "Patches/Models/Player/rachel_base.png", 0, 0
+	Patch "Patches/Models/Player/Face/Eyes5.png", 352, 320
+	Patch "Patches/Models/Player/Face/Mouths3.png", 352, 320
+}
