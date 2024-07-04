@@ -10,7 +10,6 @@ DoomEdNums
 	2014 = RLP_JuiceCan
 	
 	// Enemies
-	3004 = RLP_RobotBug
 	10000 = RLP_TargetDummy
 	10001 = RLP_Fuuko
 }
