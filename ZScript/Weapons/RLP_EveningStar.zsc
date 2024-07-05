@@ -34,7 +34,8 @@ class RLP_EveningStar : RLP_Weapon replaces Pistol
 		Fire:
 			M000 A 4 {
 				A_StartSound("weapons/evening_star/fire", CHAN_AUTO);
-				A_FireProjectile("RLP_EveningStar_Projectile", spawnofs_xy: 7, spawnheight: 2);
+				A_FireBullets(0, 0, 0, 0, "RLP_EveningStar_NullPuff", flags: FBF_NOFLASH|FBF_NORANDOMPUFFZ, missile: "RLP_EveningStar_Projectile", spawnheight: 4, spawnofs_xy: 7);
+//				ZWL_FireProjectile("RLP_EveningStar_Projectile", 0, offset: (0, 7, 2));
 				invoker.SetAnimation('Fire');
 			}
 			M000 AAAAAA 1 A_JumpIf(JustPressed(BT_ATTACK), "Fire");
@@ -60,9 +61,6 @@ class RLP_EveningStar_Projectile : FastProjectile
 		DamageFunction (20);
 		DeathSound "weapons/evening_star/explode";
 		Obituary "$OB_EVENING_STAR";
-//		+FORCEXYBILLBOARD
-//		+BILLBOARDFACECAMERA // fuck your settings, it looks awkward
-// gem from the not-so-distant future here; it looks even worse when billboarded...
 	}
 	States
 	{
@@ -76,6 +74,14 @@ class RLP_EveningStar_Projectile : FastProjectile
 			PLSE C 3 Bright;
 			PLSE D 2 Bright;
 			PLSE E 1 Bright;
+			Stop;
+	}
+}
+class RLP_EveningStar_NullPuff : BulletPuff
+{
+	States
+	{
+		Spawn:
 			Stop;
 	}
 }

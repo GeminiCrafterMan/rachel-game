@@ -19,3 +19,6 @@ version "4.12.2"
 
 // ZFootsteps
 #include "ZScript/StepEventHandler.zsc"
+
+// ZScript Weapon Library
+#include "ZScript/ZWL/zwl.zs"

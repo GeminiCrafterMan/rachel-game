@@ -2,7 +2,7 @@
 #include "./Weapons/RLP_Kahuna.zsc"
 #include "./Weapons/RLP_MissileLauncher.zsc"
 
-class RLP_Weapon : Weapon
+class RLP_Weapon : ZWeapon
 {
 	action bool JustPressed(int which) // "which" being any BT_* value, mentioned above or not
 	{
