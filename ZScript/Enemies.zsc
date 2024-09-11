@@ -2,5 +2,6 @@
 #include "./Enemies/RLP_TargetDummy.zsc" // Range map target dummy, give it a proper model later maybe?
 
 // Standard enemies
+#include "./Enemies/RLP_FlyingRobot.zsc" // Flying robot from Kenney's FPS starter kit.
 
 // Bosses

@@ -1,5 +1,6 @@
 #include "./Weapons/RLP_EveningStar.zsc"
 #include "./Weapons/RLP_Kahuna.zsc"
+#include "./Weapons/RLP_ScrapCannon.zsc"
 #include "./Weapons/RLP_MissileLauncher.zsc"
 
 class RLP_Weapon : ZWeapon

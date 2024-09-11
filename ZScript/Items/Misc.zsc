@@ -1,0 +1,17 @@
+class RLP_Coin : RLP_Currency
+{
+	Default
+	{
+		//$Category "Money"
+		//$Title "Coin
+		Inventory.Amount 1;
+		Inventory.PickupMessage "$GOTCOIN"; // "Picked up a coin."
+		+NOGRAVITY
+	}
+	States
+	{
+		Spawn:
+			M000 A -1;
+			Stop;
+	}
+}

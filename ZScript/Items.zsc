@@ -1,5 +1,6 @@
-#include "./Items/Powerups.zsc"
 #include "./Items/Ammo.zsc"
 #include "./Items/Health.zsc"
+#include "./Items/Misc.zsc"
+#include "./Items/Powerups.zsc"
 
 #include "./Items/RLP_FuukoCutter.zsc"

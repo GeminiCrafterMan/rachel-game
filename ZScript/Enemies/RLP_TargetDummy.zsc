@@ -1,4 +1,4 @@
-class RLP_TargetDummy : Actor
+class RLP_TargetDummy : RLP_Monster
 {
 	Default
 	{
@@ -11,7 +11,6 @@ class RLP_TargetDummy : Actor
 		painchance 256;
 		painsound "TRGTPN";
 		Tag "Target";
-		MONSTER;
 		BloodType "RLP_TargetDummySmoke";
 		Scale 0.7;
 		YScale 0.84;

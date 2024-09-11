@@ -123,7 +123,7 @@ class RLP_Player : PlayerPawn
 		Player.StartItem "RLP_EveningStar";
 		Player.StartItem "RLP_QuickKickController";
 		Player.WeaponSlot 2, "RLP_EveningStar";
-		Player.WeaponSlot 3, "RLP_Kahuna";
+		Player.WeaponSlot 3, "RLP_Kahuna", "RLP_ScrapCannon";
 		Player.WeaponSlot 5, "RLP_MissileLauncher";
 
 		Player.ColorRange 200, 207;
@@ -138,8 +138,9 @@ class RLP_Player : PlayerPawn
 		Player.Colorset 8, "$TXT_COLOR_AQUA",			120,127,123;
 		Player.Colorset 9, "$TXT_COLOR_SKY",			128,139,133;
 		Player.Colorset 10,"$TXT_COLOR_BLUE",			146,153,151;
-		Player.Colorset 11,"$TXT_COLOR_PURPLE",			160,169,164;
-		Player.Colorset 12,"$TXT_COLOR_MAGENTA",		179,187,184;
+		Player.Colorset 11,"$TXT_COLOR_STEELBLUE",		170,175,173; // This was originally meant to be an Evil Rachel color... but the translation table feature was being a bitch. I really did try, I even whipped out the hex editor.
+		Player.Colorset 12,"$TXT_COLOR_PURPLE",			160,169,164;
+		Player.Colorset 13,"$TXT_COLOR_MAGENTA",		179,187,184;
 		+DECOUPLEDANIMATIONS
 		+NOSKIN
 
@@ -147,33 +148,34 @@ class RLP_Player : PlayerPawn
 	States
 	{
 		Spawn:
-			M000 A 0 A_ChangeModel("", skin: "RACHNORM");
-			M000 A 1 SetAnimation('Idle', flags: SAF_LOOP|SAF_NOOVERRIDE);
+			PLAY A 0 A_ChangeModel("", skin: "RACHNORM");
+			PLAY A 1 SetAnimation('Idle', flags: SAF_LOOP|SAF_NOOVERRIDE);
 			Loop;
 		See:
-			M000 A 1 SetAnimation('Walk', 60, endFrame: 39, flags: SAF_LOOP|SAF_NOOVERRIDE);
+			PLAY A 1 SetAnimation('Walk', 60, endFrame: 39, flags: SAF_LOOP|SAF_NOOVERRIDE);
 			Loop;
 		Missile:
-			M000 A 20 SetAnimation('Fire', loopFrame: 6, flags: SAF_LOOP);
+			PLAY A 20 SetAnimation('Fire', loopFrame: 6, flags: SAF_LOOP);
 			Goto Spawn;
 		Pain:
-			M000 A 0 A_ChangeModel("", skin: "RACHPAIN");
-			M000 A 4 SetAnimation('Hurt');
-			M000 A 4 A_Pain;
+			PLAY A 0 A_ChangeModel("", skin: "RACHPAIN");
+			PLAY A 4 SetAnimation('Hurt');
+			PLAY A 4 A_Pain;
 			Goto Spawn;
 		Death:
-			M000 A 10 SetAnimation('Death');
-			M000 A 10 A_PlayerScream;
-			M000 A -1 A_NoBlocking;
+			PLAY A 0 A_ChangeModel("", skin: "RACHPAIN");
+			PLAY A 10 SetAnimation('Death');
+			PLAY A 10 A_PlayerScream;
+			PLAY A -1 A_NoBlocking;
 			Stop;
 		Jump:
-			M000 A 1 SetAnimation('Jump', loopframe: 2, flags: SAF_LOOP|SAF_NOOVERRIDE);
+			PLAY A 1 SetAnimation('Jump', loopframe: 2, flags: SAF_LOOP|SAF_NOOVERRIDE);
 			Loop;
 		Spring:
-			M000 A 1 SetAnimation('Spring', loopframe: 2, flags: SAF_LOOP|SAF_NOOVERRIDE);
+			PLAY A 1 SetAnimation('Spring', loopframe: 2, flags: SAF_LOOP|SAF_NOOVERRIDE);
 			Loop;
 		Fall:
-			M000 A 1 SetAnimation('Fall', loopframe: 2, flags: SAF_LOOP|SAF_NOOVERRIDE);
+			PLAY A 1 SetAnimation('Fall', loopframe: 2, flags: SAF_LOOP|SAF_NOOVERRIDE);
 			Loop;
 	}
 }

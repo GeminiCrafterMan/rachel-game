@@ -1,6 +1,6 @@
 [enu default]
 
-TXT_GAME_NAME = "My Standalone Game";
+TXT_GAME_NAME = "Rachel Game";
 TXT_MAP01_NAME = "Start game";
 TXT_RANGE_NAME = "Firing range map";
 TXT_TEST_NAME = "Test map";
@@ -22,12 +22,13 @@ TXT_COLOR_GREEN = "Green";
 TXT_COLOR_AQUA = "Aqua";
 TXT_COLOR_SKY = "Sky";
 TXT_COLOR_BLUE = "Blue";
+TXT_COLOR_STEELBLUE = "Steel Blue";
 TXT_COLOR_PURPLE = "Purple";
 TXT_COLOR_MAGENTA = "Magenta";
 
 TXT_RANGE = "Firing Range";
 TXT_TEST = "Test Map";
-TXT_MAP01 = "Discount First Cave"; // CHANGE LATER!!!
+//TXT_MAP01 = "Entryway";
 
 // Weapon pickups
 PICKUP_EVENING_STAR = "\c[White]Picked up the \c[Orange]Evening Star\c[White].";

@@ -1,0 +1,24 @@
+class RLP_FlyingRobot : RLP_Monster
+{
+	Default
+	{
+		Health 30;
+		Radius 16;
+		Height 26;
+		Speed 4;
+		+NOGRAVITY
+		+FLOAT
+	}
+	States
+	{
+		Spawn:
+			M000 A 1 A_Look;
+			Loop;
+		See:
+			M000 A 1 A_Chase;
+			Loop;
+		Death:
+			M000 A 15;
+			Stop;
+	}
+}

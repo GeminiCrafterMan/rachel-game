@@ -38,9 +38,9 @@ maps
 		overrideceilheight = false;
 		overridebrightness = false;
 		uselongtexturenames = false;
-		viewpositionx = -444.6689f;
-		viewpositiony = 300.3822f;
-		viewscale = 2.413399f;
+		viewpositionx = -63.22676f;
+		viewpositiony = -857.8495f;
+		viewscale = 0.8449972f;
 		scriptcompiler = "zdoom_acs.cfg";
 		
 		grid
@@ -85,8 +85,30 @@ maps
 			stderriserror = true;
 		}
 		
+		plugins
+		{
+			
+			threedfloormode
+			{
+				
+				controlsectorarea
+				{
+					usecustomtagrange = false;
+					outerleft = -1408;
+					outerright = -896;
+					outertop = 832;
+					outerbottom = 320;
+				}
+			}
+		}
+		
 		fieldtypes
 		{
+			
+			sector
+			{
+				user_managed_3d_floor = 3;
+			}
 			
 			thing
 			{

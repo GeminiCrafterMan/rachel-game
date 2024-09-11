@@ -27,4 +27,5 @@ GameInfo
 gamedefaults
 {
 	PixelRatio = 1.0
+	AirControl = 0.5
 }

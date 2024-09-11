@@ -1,0 +1,20 @@
+# CHARACTER IDEAS - non-final names are marked with (?)
+
+??? (?):
+* A relatively small girl with a big cloak and a cowboy hat who has mastered combat with her signature revolver.
+* Might show up a couple times to save your bacon, telling you to sharpen up and watch your back.
+* Might be seen doing some sort of agile movements across parts of the backgrounds of stages.
+* Boss fight eventually? Maybe she's testing you, like Meta Knight.
+* Hardened expression, unless she's been knocked back or otherwise caught off guard, which would be difficult to do.
+
+# WEAPON IDEAS - non-final names are marked with (?)
+
+Scrap Cannon:
+* Has a small press in it, visible from the outside through a transparent area
+* Acts kind of like 8BDM Dust Crusher but maybe a bit cooler (projectile that splits into smaller ones on impact)
+* Alt-fire just fires small chunks of the stored trash
+* Scrap is collected from robot enemies and spent ammo
+
+??? (?):
+* Forward air dash like Pile Driver (direction you're aiming)
+* Stops everything for a couple frames (hitstop) then, unlike Pile Driver, knocks enemy back on impact to then potentially hit other enemies in the trajectory you push them in

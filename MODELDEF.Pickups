@@ -1,3 +1,14 @@
+Model RLP_Coin
+{
+	Path "Models/"
+	Model 0 "Pickups/coin.obj"
+	Skin 0 "colormap-kenneyplatformer.png"
+	Scale 50 50 50
+	ROTATING
+
+	FrameIndex M000 A 0 0
+}
+
 Model RLP_JuiceCan
 {
 	Path "Models/Pickups/Food/"

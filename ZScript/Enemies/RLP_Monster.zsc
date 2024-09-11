@@ -3,7 +3,7 @@ class RLP_Monster : Actor
 	Default
 	{
 		Monster;
-		+DECOUPLEDANIMATIONS
+//		+DECOUPLEDANIMATIONS // Not necessarily!!
 		+INTERPOLATEANGLES
 	}
 }

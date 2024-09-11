@@ -39,3 +39,24 @@ class RLP_MissileAmmo : Ammo
 			Stop;
 	}
 }
+
+class RLP_Scrap : Ammo
+{
+	Default
+	{
+		//$Category "Ammunition
+		//$Title "Missile
+		Inventory.PickupMessage "$GOTMISSILE"; // "Picked up a missile."
+		Inventory.Amount 1;
+		Inventory.MaxAmount 30;
+		Ammo.BackpackAmount 5;
+		Ammo.BackpackMaxAmount 60;
+		Inventory.Icon "ROCKA0";
+	}
+	States
+	{
+		Spawn:
+			ROCK A -1;
+			Stop;
+	}
+}

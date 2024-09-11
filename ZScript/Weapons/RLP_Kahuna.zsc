@@ -3,6 +3,7 @@ class RLP_Kahuna : RLP_Weapon replaces Shotgun // for now, mostly so I can play 
 {
 	Default
 	{
+		//$Category "Weapons"
 		//$Title "Slayer's Kahuna
 		Weapon.SelectionOrder 1900;
 		+WEAPON.NOAUTOFIRE
@@ -110,11 +111,11 @@ class RLP_Tracer : FastProjectile
 		Death:
 			PUFF A 2 BRIGHT/* A_SpawnDebris("RLP_TracerSpark")*/;
 			PUFF B 1 BRIGHT A_SetTranslucent(0.9,0);
-			PUFF B 1 BRIGHT A_PlaySound("bullet/ricochet",CHAN_BODY,.5);
+			PUFF B 1 BRIGHT A_StartSound("bullet/ricochet",CHAN_BODY,.5);
 			PUFF CD 2 BRIGHT;
 			Stop;
 		XDeath:
-			TNT1 A 3 A_PlaySound("bullet/hitFlesh",CHAN_BODY,.5);
+			TNT1 A 3 A_StartSound("bullet/hitFlesh",CHAN_BODY,.5);
 			Stop;
 	}
 }

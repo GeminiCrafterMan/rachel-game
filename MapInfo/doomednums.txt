@@ -9,7 +9,8 @@ DoomEdNums
 	// Items
 	2014 = RLP_JuiceCan
 	
-	// Enemies
+	// Enemies & People
 	10000 = RLP_TargetDummy
 	10001 = RLP_Fuuko
+	10002 = RLP_FlyingRobot
 }

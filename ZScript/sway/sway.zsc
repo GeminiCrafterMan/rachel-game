@@ -98,6 +98,8 @@ class SwayManager : Thinker
 	{
 		for (uint i = 0; i < MAXPLAYERS; ++i)
 		{
+			if (!self)
+				break;
 			if (!playerInGame[i] || !players[i].mo)
 				continue;
 			
